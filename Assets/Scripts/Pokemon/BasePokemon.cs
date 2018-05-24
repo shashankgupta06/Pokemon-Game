@@ -5,31 +5,56 @@ using UnityEngine.UI;
 
 public class BasePokemon : MonoBehaviour {
 
-	public string Name;
+	public string PName;
 	public Sprite image;
 	public BiomeList biomeFound;
 	public PokemonType type;
-	public float baseHP;
 	public Rarity rarity;
-	private float maxHealth;
-	public float baseAttack;
-	public float maxAttack;
-	public float baseDefence;
-	public float maxDefence;
+	public int HP;
+	private int maxHP;
+	public Stat attackStat;
+	public Stat defenceStat;
 	public float speed;
+
+	public PokemonStats pokemonStats;
+
+	public bool canEvolve;
+	public PokemonEvolution evolveTo;
+
 
 	private int level;
 
 
 	// Use this for initialization
 	void Start () {
-		
+		maxHP = HP;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+
+	public void AddMember(BasePokemon bp)
+	{
+
+		this.PName = bp.PName;
+		this.image = bp.image;
+		this.biomeFound = bp.biomeFound;
+		this.type = bp.type;
+		this.rarity = bp.rarity;
+		this.HP = bp.HP;
+		this.maxHP = bp.maxHP;
+		this.attackStat = bp.attackStat;
+		this.defenceStat = bp.defenceStat;
+		this.pokemonStats = bp.pokemonStats;
+		this.canEvolve = bp.canEvolve;
+		this.level = bp.level;
+
+
+	}
+
 }
 
 
@@ -45,20 +70,42 @@ public class BasePokemon : MonoBehaviour {
 	public enum PokemonType
 	{
 		Flying,
-	Ground,
-	Rock,
-	Steel,
-	Fire,
-	Water,
-	Grass,
-	Ice,
-	Electro,
-	Psychic,
-	Dark,
-	Dragon
+		Ground,
+		Rock,
+		Steel,
+		Fire,
+		Water,
+		Grass,
+		Ice,
+		Electric,
+		Psychic,
+		Dark,
+		Dragon,
+		Fighting,
+		Normal
 
 
 	}
 
 
+[System.Serializable]
+public class PokemonEvolution
+{
+
+	public BasePokemon nextEvolution;
+	public int levelUpLevel;
+
+
+}
+
+[System.Serializable]
+public class PokemonStats
+{
+	public int attackStat;
+	public int defenceStat;
+	public int speedStat;
+	public int spAttackStat;
+	public int spDefenceStat;
+	public int evasionStat;
+}
 
