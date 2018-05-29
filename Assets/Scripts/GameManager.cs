@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -18,6 +19,13 @@ public class GameManager : MonoBehaviour {
 	public GameObject emptyPoke;
 
 	public BattleManager bm;
+
+	public Text type;
+	public Text PP;
+	public Text pokemonName;
+	public Text levelText;
+	public Text updateText;
+
 
 	// Use this for initialization
 	void Start () {
@@ -38,7 +46,6 @@ public class GameManager : MonoBehaviour {
 
 		BasePokemon battlePokemon = GetRandomPokemonFromList (GetPokemonByRarity (rarity));
 
-		Debug.Log (battlePokemon.name);
 
 		player.GetComponent<PlayerMovement>().isAllowedToMove = false;
 
@@ -52,6 +59,23 @@ public class GameManager : MonoBehaviour {
 		tempPoke.AddMember (battlePokemon); 
 
 		dPoke.GetComponent<SpriteRenderer> ().sprite = battlePokemon.image;
+		updateText.text ="A wild "+ dPoke.GetComponent<BasePokemon>().PName+ " appeared!";
+
+		GameObject ownedPoke = Instantiate (emptyPoke, attackPodium.transform.position, Quaternion.identity) as GameObject;
+		Vector3 OwnedPokeLocalPos = new Vector3 (0, 1, 0);
+
+
+		ownedPoke.transform.parent = attackPodium;
+		ownedPoke.transform.localPosition = OwnedPokeLocalPos;
+		ownedPoke.transform.Rotate (0, 180, 0);
+		BasePokemon ownedPokemon = ownedPoke.AddComponent<BasePokemon> () as BasePokemon;
+		ownedPokemon.AddMember (player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon);
+
+		ownedPoke.GetComponent<SpriteRenderer> ().sprite = ownedPokemon.image;
+		type.text = player.GetComponent<Player> ().ownedPokemon [0].moves [0].Category.ToString ();
+		PP.text = player.GetComponent<Player> ().ownedPokemon [0].moves [0].PP.ToString();          //eventually move this all to BattleManager?
+		pokemonName.text = player.GetComponent<Player>().ownedPokemon[0].NickName;
+		levelText.text = player.GetComponent<Player> ().ownedPokemon [0].level.ToString();
 
 		bm.ChangeMenu (BattleManager.BattleMenu.Selection);
 	}
@@ -83,7 +107,7 @@ public class GameManager : MonoBehaviour {
 public class PokemonMoves
 {
 
-	string Name;
+	public string Name;
 	public MoveType Category;
 	public Stat moveStat;
 	public PokemonType moveType;

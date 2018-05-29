@@ -330,7 +330,7 @@ TextureImporter:
     21300646: General_323
     21300648: General_324
     21300650: General_325
-    21300652: General_326
+    21300652: WhiteFence8
     21300654: General_327
     21300656: General_328
     21300658: General_329
@@ -395,8 +395,8 @@ TextureImporter:
     21300776: General_388
     21300778: General_389
     21300780: General_390
-    21300782: General_391
-    21300784: General_392
+    21300782: tree1_1
+    21300784: tree1_2
     21300786: General_393
     21300788: General_394
     21300790: General_395
@@ -438,8 +438,8 @@ TextureImporter:
     21300862: General_431
     21300864: General_432
     21300866: General_433
-    21300868: General_434
-    21300870: General_435
+    21300868: tree1_3
+    21300870: tree1_4
     21300872: General_436
     21300874: General_437
     21300876: General_438
@@ -480,8 +480,8 @@ TextureImporter:
     21300946: General_473
     21300948: General_474
     21300950: General_475
-    21300952: General_476
-    21300954: General_477
+    21300952: tree1_5
+    21300954: tree1_6
     21300956: General_478
     21300958: General_479
     21300960: General_480
@@ -638,7 +638,7 @@ TextureImporter:
     21301262: General_631
     21301264: General_632
     21301266: General_633
-    21301268: General_634
+    21301268: TownSign
     21301270: General_635
     21301272: General_636
     21301274: General_637
@@ -6376,7 +6376,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_326
+      name: WhiteFence8
       rect:
         serializedVersion: 2
         x: 336
@@ -7286,7 +7286,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_391
+      name: tree1_1
       rect:
         serializedVersion: 2
         x: 16
@@ -7300,7 +7300,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_392
+      name: tree1_2
       rect:
         serializedVersion: 2
         x: 32
@@ -7888,7 +7888,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_434
+      name: tree1_3
       rect:
         serializedVersion: 2
         x: 16
@@ -7902,7 +7902,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_435
+      name: tree1_4
       rect:
         serializedVersion: 2
         x: 32
@@ -8476,7 +8476,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_476
+      name: tree1_5
       rect:
         serializedVersion: 2
         x: 16
@@ -8490,7 +8490,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_477
+      name: tree1_6
       rect:
         serializedVersion: 2
         x: 32
@@ -10688,7 +10688,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_634
+      name: TownSign
       rect:
         serializedVersion: 2
         x: 48

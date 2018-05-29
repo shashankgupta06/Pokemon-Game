@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BattleManager : MonoBehaviour {
 
 	public BattleMenu currentMenu;
-
+	public GameObject player;
 
 	[Header("Selection")]
 	public GameObject SelectionMenu;
@@ -43,6 +43,9 @@ public class BattleManager : MonoBehaviour {
 
 	[Header("Misc")]
 	public int currentSelection;
+
+
+	//public Text PokemonName;
 
 
 
@@ -97,7 +100,7 @@ public class BattleManager : MonoBehaviour {
 			switch (currentSelection) 
 			{
 			case 1:
-				moveO.text = "> " + moveOT;
+				moveO.text = "> " + player.GetComponent<Player>().ownedPokemon[0].moves[0].Name;
 				moveT.text =  moveTT;
 				moveTH.text =  moveTHT;
 				moveF.text = moveFT;
@@ -128,7 +131,7 @@ public class BattleManager : MonoBehaviour {
 			break;
 
 		case BattleMenu.Selection:
-			Debug.Log (currentSelection);
+			
 			switch (currentSelection) 
 			{
 			case 1:

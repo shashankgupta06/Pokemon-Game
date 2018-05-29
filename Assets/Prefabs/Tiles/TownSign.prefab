@@ -9,79 +9,43 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1099399588480958}
+  m_RootGameObject: {fileID: 1201435721018968}
   m_IsPrefabParent: 1
---- !u!1 &1099399588480958
+--- !u!1 &1201435721018968
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4304474879964632}
-  - component: {fileID: 212391374987523764}
-  - component: {fileID: 114150910629899468}
+  - component: {fileID: 4531204120498082}
+  - component: {fileID: 212871201198549302}
   m_Layer: 0
-  m_Name: Pikachu
+  m_Name: TownSign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4304474879964632
+--- !u!4 &4531204120498082
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1099399588480958}
+  m_GameObject: {fileID: 1201435721018968}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.355667, y: -0.85537416, z: 0}
+  m_LocalPosition: {x: 34.6, y: -25.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114150910629899468
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1099399588480958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f49dd8ba8df69a4fa6c55f31ea2f6bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PName: Pikachu
-  image: {fileID: 21300024, guid: 7fd81ad725659d143aa4569c40a6d820, type: 3}
-  biomeFound: 0
-  type: 8
-  rarity: 0
-  HP: 100
-  attackStat:
-    minimum: 10
-    maximum: 30
-  defenceStat:
-    minimum: 10
-    maximum: 20
-  speed: 90
-  pokemonStats:
-    attackStat: 17
-    defenceStat: 13
-    speedStat: 90
-    spAttackStat: 25
-    spDefenceStat: 18
-    evasionStat: 10
-  canEvolve: 0
-  evolveTo:
-    nextEvolution: {fileID: 0}
-    levelUpLevel: 0
---- !u!212 &212391374987523764
+--- !u!212 &212871201198549302
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1099399588480958}
+  m_GameObject: {fileID: 1201435721018968}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -110,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300024, guid: 7fd81ad725659d143aa4569c40a6d820, type: 3}
+  m_Sprite: {fileID: 21301268, guid: fe3b1e453b9d88047b7d779f8a2ba8c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

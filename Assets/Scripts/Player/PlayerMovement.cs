@@ -21,9 +21,12 @@ public class PlayerMovement : MonoBehaviour {
 
 	public bool isAllowedToMove = true;
 
+
+	GameObject[] trees;
+
 	void Start()
 	{
-
+		trees = GameObject.FindGameObjectsWithTag ("Tree");
 		isAllowedToMove = true;
 	}
 
@@ -92,31 +95,72 @@ public class PlayerMovement : MonoBehaviour {
 			}
 			
 		}
-		
+	
+
+
+
 	}
 
 
 	public IEnumerator Move(Transform entity)
 	{
+
 		isMoving = true;
 		startPos = entity.position;
 		t = 0;
 		endPos = new Vector3 (startPos.x + System.Math.Sign (input.x), startPos.y + System.Math.Sign (input.y), startPos.z);
 
-		while (t < 1f) 
-		{
+		foreach (GameObject tree in trees) {
 
-			t += Time.deltaTime * walkSpeed;
-			entity.position = Vector3.Lerp (startPos, endPos, t);
-			yield return null;
+			if(gameObject.GetComponent<BoxCollider2D> ().IsTouching (tree.GetComponent<BoxCollider2D> ())/* && Input.GetKeyDown(KeyCode.LeftArrow)*/){
+				Debug.Log ("YAY");
+				entity.position = startPos;
+			}
 
+			if (gameObject.GetComponent<BoxCollider2D> ().IsTouching (tree.GetComponent<BoxCollider2D> ()) && gameObject.GetComponent<SpriteRenderer> ().sprite == westSprite) {         //solution to colliders?
+
+				Debug.Log ("touching");
+				entity.position = startPos;
+				//DontMove (tree);
+				//break;
+				/*if(Input.GetKeyDown(KeyCode.LeftArrow)){
+					Debug.Log ("should stop");
+					entity.position = startPos;*/
+			
+
+
+		} else {
+
+				while (t < 1f) {
+
+					t += Time.deltaTime * walkSpeed;
+					entity.position = Vector3.Lerp (startPos, endPos, t);
+					yield return null;
+
+				}
+
+
+			}
+		}
+			isMoving = false;
+			yield return 0;
 		}
 
-		isMoving = false;
-		yield return 0;
-	}
+
+	/*public void DontMove(GameObject entity)
+	{
+		Debug.Log ("gotin");
+		//entity.position = startPos;
+		if (gameObject.GetComponent<BoxCollider2D> ().IsTouching (entity.GetComponent<BoxCollider2D> ()) && Input.GetKeyDown (KeyCode.LeftArrow)) {
+			transform.position = startPos;
+
+		}
+	}*/
+
 
 }
+
+
 
 enum Direction
 {

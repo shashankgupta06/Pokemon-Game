@@ -22,7 +22,7 @@ public class BasePokemon : MonoBehaviour {
 	public PokemonEvolution evolveTo;
 
 
-	private int level;
+	public int level;                          //was private
 
 
 	// Use this for initialization
