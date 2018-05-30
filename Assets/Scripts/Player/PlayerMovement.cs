@@ -110,29 +110,15 @@ public class PlayerMovement : MonoBehaviour {
 		t = 0;
 		endPos = new Vector3 (startPos.x + System.Math.Sign (input.x), startPos.y + System.Math.Sign (input.y), startPos.z);
 
+
 		foreach (GameObject tree in trees) {
 
-			if(gameObject.GetComponent<BoxCollider2D> ().IsTouching (tree.GetComponent<BoxCollider2D> ())/* && Input.GetKeyDown(KeyCode.LeftArrow)*/){
-				Debug.Log ("YAY");
+			if (gameObject.GetComponent<BoxCollider2D> ().IsTouching (tree.GetComponent<BoxCollider2D> ())) {         //solution to colliders?
 				entity.position = startPos;
-			}
-
-			if (gameObject.GetComponent<BoxCollider2D> ().IsTouching (tree.GetComponent<BoxCollider2D> ()) && gameObject.GetComponent<SpriteRenderer> ().sprite == westSprite) {         //solution to colliders?
-
-				Debug.Log ("touching");
-				entity.position = startPos;
-				//DontMove (tree);
-				//break;
-				/*if(Input.GetKeyDown(KeyCode.LeftArrow)){
-					Debug.Log ("should stop");
-					entity.position = startPos;*/
-			
 
 
-		} else {
-
+			} else {
 				while (t < 1f) {
-
 					t += Time.deltaTime * walkSpeed;
 					entity.position = Vector3.Lerp (startPos, endPos, t);
 					yield return null;
@@ -145,17 +131,7 @@ public class PlayerMovement : MonoBehaviour {
 			isMoving = false;
 			yield return 0;
 		}
-
-
-	/*public void DontMove(GameObject entity)
-	{
-		Debug.Log ("gotin");
-		//entity.position = startPos;
-		if (gameObject.GetComponent<BoxCollider2D> ().IsTouching (entity.GetComponent<BoxCollider2D> ()) && Input.GetKeyDown (KeyCode.LeftArrow)) {
-			transform.position = startPos;
-
-		}
-	}*/
+		
 
 
 }
