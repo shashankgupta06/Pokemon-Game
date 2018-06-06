@@ -1089,11 +1089,11 @@ TextureImporter:
     21302164: General_1082
     21302166: General_1083
     21302168: General_1084
-    21302170: General_1085
-    21302172: General_1086
-    21302174: General_1087
-    21302176: General_1088
-    21302178: General_1089
+    21302170: house1_0
+    21302172: house1_1
+    21302174: house1_2
+    21302176: house1_3
+    21302178: house1_4
     21302180: General_1090
     21302182: General_1091
     21302184: General_1092
@@ -1133,11 +1133,11 @@ TextureImporter:
     21302252: General_1126
     21302254: General_1127
     21302256: General_1128
-    21302258: General_1129
-    21302260: General_1130
-    21302262: General_1131
-    21302264: General_1132
-    21302266: General_1133
+    21302258: house1_5
+    21302260: house1_6
+    21302262: house1_7
+    21302264: house1_8
+    21302266: house1_9
     21302268: General_1134
     21302270: General_1135
     21302272: General_1136
@@ -1179,11 +1179,11 @@ TextureImporter:
     21302344: General_1172
     21302346: General_1173
     21302348: General_1174
-    21302350: General_1175
-    21302352: General_1176
-    21302354: General_1177
-    21302356: General_1178
-    21302358: General_1179
+    21302350: house1_10
+    21302352: house1_11
+    21302354: house1_12
+    21302356: house1_13
+    21302358: house1_14
     21302360: General_1180
     21302362: General_1181
     21302364: General_1182
@@ -1225,11 +1225,11 @@ TextureImporter:
     21302436: General_1218
     21302438: General_1219
     21302440: General_1220
-    21302442: General_1221
-    21302444: General_1222
-    21302446: General_1223
-    21302448: General_1224
-    21302450: General_1225
+    21302442: house1_15
+    21302444: house1_16
+    21302446: house1_17
+    21302448: house1_18
+    21302450: house1_19
     21302452: General_1226
     21302454: General_1227
     21302456: General_1228
@@ -1263,11 +1263,11 @@ TextureImporter:
     21302512: General_1256
     21302514: General_1257
     21302516: General_1258
-    21302518: General_1259
-    21302520: General_1260
-    21302522: General_1261
-    21302524: General_1262
-    21302526: General_1263
+    21302518: house1_20
+    21302520: house1_21
+    21302522: house1_22
+    21302524: house1_23
+    21302526: house1_24
     21302528: General_1264
     21302530: General_1265
     21302532: General_1266
@@ -1491,10 +1491,10 @@ TextureImporter:
     21302968: General_1487
     21302970: General_1488
     21302972: General_1489
-    21302974: House1_1
-    21302976: House1_2
-    21302978: House1_3
-    21302980: House1_4
+    21302974: House2_1
+    21302976: House2_2
+    21302978: House2_3
+    21302980: House2_4
     21302982: General_1494
     21302984: General_1495
     21302986: General_1496
@@ -1520,10 +1520,10 @@ TextureImporter:
     21303026: General_1516
     21303028: General_1517
     21303030: General_1518
-    21303032: House1_5
-    21303034: House1_6
-    21303036: House1_7
-    21303038: House1_8
+    21303032: House2_5
+    21303034: House2_6
+    21303036: House2_7
+    21303038: House2_8
     21303040: General_1524
     21303042: General_1525
     21303044: General_1526
@@ -1536,10 +1536,10 @@ TextureImporter:
     21303058: General_1533
     21303060: General_1534
     21303062: General_1535
-    21303064: House1_9
-    21303066: House1_10
-    21303068: House1_11
-    21303070: House1_12
+    21303064: House2_9
+    21303066: House2_10
+    21303068: House2_11
+    21303070: House2_12
     21303072: General_1540
     21303074: General_1541
     21303076: General_1542
@@ -1547,10 +1547,10 @@ TextureImporter:
     21303080: General_1544
     21303082: General_1545
     21303084: General_1546
-    21303086: House1_13
-    21303088: House1_14
-    21303090: House1_15
-    21303092: House1_16
+    21303086: House2_13
+    21303088: House2_14
+    21303090: House2_15
+    21303092: House2_16
     21303094: General_1551
     21303096: General_1552
     21303098: General_1553
@@ -17002,7 +17002,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1085
+      name: house1_0
       rect:
         serializedVersion: 2
         x: 512
@@ -17016,7 +17016,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1086
+      name: house1_1
       rect:
         serializedVersion: 2
         x: 528
@@ -17030,7 +17030,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1087
+      name: house1_2
       rect:
         serializedVersion: 2
         x: 544
@@ -17044,7 +17044,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1088
+      name: house1_3
       rect:
         serializedVersion: 2
         x: 560
@@ -17058,7 +17058,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1089
+      name: house1_4
       rect:
         serializedVersion: 2
         x: 576
@@ -17565,8 +17565,8 @@ TextureImporter:
       name: General_1125
       rect:
         serializedVersion: 2
-        x: 448
-        y: 288
+        x: 449
+        y: 289
         width: 16
         height: 16
       alignment: 0
@@ -17579,7 +17579,7 @@ TextureImporter:
       name: General_1126
       rect:
         serializedVersion: 2
-        x: 464
+        x: 465
         y: 288
         width: 16
         height: 16
@@ -17618,7 +17618,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1129
+      name: house1_5
       rect:
         serializedVersion: 2
         x: 512
@@ -17632,7 +17632,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1130
+      name: house1_6
       rect:
         serializedVersion: 2
         x: 528
@@ -17646,7 +17646,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1131
+      name: house1_7
       rect:
         serializedVersion: 2
         x: 544
@@ -17660,7 +17660,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1132
+      name: house1_8
       rect:
         serializedVersion: 2
         x: 560
@@ -17674,7 +17674,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1133
+      name: house1_9
       rect:
         serializedVersion: 2
         x: 576
@@ -18262,7 +18262,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1175
+      name: house1_10
       rect:
         serializedVersion: 2
         x: 512
@@ -18276,7 +18276,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1176
+      name: house1_11
       rect:
         serializedVersion: 2
         x: 528
@@ -18290,7 +18290,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1177
+      name: house1_12
       rect:
         serializedVersion: 2
         x: 544
@@ -18304,7 +18304,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1178
+      name: house1_13
       rect:
         serializedVersion: 2
         x: 560
@@ -18318,7 +18318,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1179
+      name: house1_14
       rect:
         serializedVersion: 2
         x: 576
@@ -18906,7 +18906,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1221
+      name: house1_15
       rect:
         serializedVersion: 2
         x: 512
@@ -18920,7 +18920,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1222
+      name: house1_16
       rect:
         serializedVersion: 2
         x: 528
@@ -18934,7 +18934,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1223
+      name: house1_17
       rect:
         serializedVersion: 2
         x: 544
@@ -18948,7 +18948,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1224
+      name: house1_18
       rect:
         serializedVersion: 2
         x: 560
@@ -18962,7 +18962,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1225
+      name: house1_19
       rect:
         serializedVersion: 2
         x: 576
@@ -19438,7 +19438,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1259
+      name: house1_20
       rect:
         serializedVersion: 2
         x: 512
@@ -19452,7 +19452,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1260
+      name: house1_21
       rect:
         serializedVersion: 2
         x: 528
@@ -19466,7 +19466,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1261
+      name: house1_22
       rect:
         serializedVersion: 2
         x: 544
@@ -19480,7 +19480,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1262
+      name: house1_23
       rect:
         serializedVersion: 2
         x: 560
@@ -19494,7 +19494,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1263
+      name: house1_24
       rect:
         serializedVersion: 2
         x: 576
@@ -22630,7 +22630,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: House1_1
+      name: House2_1
       rect:
         serializedVersion: 2
         x: 160
@@ -22644,7 +22644,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: House1_2
+      name: House2_2
       rect:
         serializedVersion: 2
         x: 176
@@ -22658,7 +22658,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: House1_3
+      name: House2_3
       rect:
         serializedVersion: 2
         x: 192
@@ -22672,7 +22672,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: House1_4
+      name: House2_4
       rect:
         serializedVersion: 2
         x: 208
@@ -23036,7 +23036,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: House1_5
+      name: House2_5
       rect:
         serializedVersion: 2
         x: 160
@@ -23050,7 +23050,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: House1_6
+      name: House2_6
       rect:
         serializedVersion: 2
         x: 176
@@ -23064,7 +23064,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: House1_7
+      name: House2_7
       rect:
         serializedVersion: 2
         x: 192
@@ -23078,7 +23078,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: House1_8
+      name: House2_8
       rect:
         serializedVersion: 2
         x: 208
@@ -23260,7 +23260,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: House1_9
+      name: House2_9
       rect:
         serializedVersion: 2
         x: 160
@@ -23274,7 +23274,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: House1_10
+      name: House2_10
       rect:
         serializedVersion: 2
         x: 176
@@ -23288,7 +23288,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: House1_11
+      name: House2_11
       rect:
         serializedVersion: 2
         x: 192
@@ -23302,7 +23302,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: House1_12
+      name: House2_12
       rect:
         serializedVersion: 2
         x: 208
@@ -23414,7 +23414,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: House1_13
+      name: House2_13
       rect:
         serializedVersion: 2
         x: 160
@@ -23428,7 +23428,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: House1_14
+      name: House2_14
       rect:
         serializedVersion: 2
         x: 176
@@ -23442,7 +23442,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: House1_15
+      name: House2_15
       rect:
         serializedVersion: 2
         x: 192
@@ -23456,7 +23456,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: House1_16
+      name: House2_16
       rect:
         serializedVersion: 2
         x: 208
