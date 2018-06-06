@@ -11,7 +11,13 @@ public class Collider : MonoBehaviour {
 	// Update is called once per frame
 	void OnTriggerEnter2D(Collider2D c)
 	{
-		canvas.SetActive (true);
-		canvas.GetComponentInChildren<Text> ().text = "Pallet Town";
+		if (player.GetComponent<SpriteRenderer> ().sprite.name == "South_0") {
+			canvas.SetActive (true);
+			canvas.GetComponentInChildren<Text> ().text = gameObject.GetComponent<Text> ().text;
+		}
     }
+
+	void OnTriggerExit2D(Collider2D c){
+		canvas.SetActive (false);
+	}
 }
