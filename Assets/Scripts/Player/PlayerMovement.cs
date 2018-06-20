@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
+		isAllowedToMove = true;        //??
 		if (!isMoving && isAllowedToMove) {
 			input = new Vector2 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"));
 
@@ -105,20 +105,31 @@ public class PlayerMovement : MonoBehaviour {
 	public IEnumerator Move(Transform entity)
 	{
 
-		isMoving = true;
+		//isMoving = true;
 		startPos = entity.position;
 		t = 0;
-		endPos = new Vector3 (startPos.x + System.Math.Sign (input.x), startPos.y + System.Math.Sign (input.y), startPos.z);
+		//endPos = new Vector3 (startPos.x + System.Math.Sign (input.x), startPos.y + System.Math.Sign (input.y), startPos.z);
 
 
 		foreach (GameObject tree in trees) {
 
 			if (gameObject.GetComponent<BoxCollider2D> ().IsTouching (tree.GetComponent<BoxCollider2D> ())) {         //solution to colliders?
-				entity.position = startPos;
+
+
+				//if (currentDir == Direction.North && System.Math.Sign(input.y) > 0) {
+					entity.position = Vector3.Lerp (startPos, startPos, t);
+					//isAllowedToMove = false;
+					//Debug.Log ("sd");
+					//break;
+     				//} else {
+					//isAllowedToMove = true;
+				//} 
 
 
 			} else {
 				while (t < 1f) {
+					isMoving = true;
+					endPos = new Vector3 (startPos.x + System.Math.Sign (input.x), startPos.y + System.Math.Sign (input.y), startPos.z);
 					t += Time.deltaTime * walkSpeed;
 					entity.position = Vector3.Lerp (startPos, endPos, t);
 					yield return null;
