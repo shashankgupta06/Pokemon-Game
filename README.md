@@ -2,14 +2,18 @@
 Making an old-school pokemon game using unity and C#
 
 
-Completed:                                            Features to Work on Immediately:
+Completed:                                          
 
-Pallet Town Exterior                                  Collision is still a little faulty
-Character Movement                                    Interior of pallet town buildings
+Pallet Town Exterior                                 
+Character Movement                                   
 Main Menu Layout                                      
 Character Creation                                    
 Pokemon spawning in the grass                         
 
+
+ Features to Work on Immediately:
+ Collision is still a little faulty
+ Interior of pallet town buildings
 
 Currently working on:
 OakScene Walkthrough Text
