@@ -534,6 +534,7 @@ GameObject:
   - component: {fileID: 1516880797}
   - component: {fileID: 1516880796}
   - component: {fileID: 1516880798}
+  - component: {fileID: 1516880799}
   m_Layer: 5
   m_Name: QuitGame
   m_TagString: Untagged
@@ -634,6 +635,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1516880799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1516880794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9356ee6d7e98ee941aae99349a7b3191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quit: {fileID: 1516880798}
 --- !u!1 &1612355736
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,6 +930,7 @@ GameObject:
   - component: {fileID: 1947191811}
   - component: {fileID: 1947191810}
   - component: {fileID: 1947191812}
+  - component: {fileID: 1947191813}
   m_Layer: 5
   m_Name: LoadGameButton
   m_TagString: Untagged
@@ -1017,6 +1031,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1947191813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1947191808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37e07588d34f664bb471f75ff8d9aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadButton: {fileID: 1947191812}
 --- !u!1 &2084516589
 GameObject:
   m_ObjectHideFlags: 0

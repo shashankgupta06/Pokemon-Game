@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class StartButtonScript : MonoBehaviour {
 
@@ -15,7 +16,7 @@ public class StartButtonScript : MonoBehaviour {
 	// Update is called once per frame
 	void Clicked () {
 
-		Debug.Log ("pop");
+		SceneManager.LoadScene ("Character");
 
 
 	}
