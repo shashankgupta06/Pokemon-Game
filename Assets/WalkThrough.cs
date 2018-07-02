@@ -35,7 +35,7 @@ public class WalkThrough : MonoBehaviour {
 				break;
 
 			case 2:
-				WalkThroughText.text = "Some use POKEMON as pets where as othr use them for battling";
+				WalkThroughText.text = "Some use POKEMON as pets where as others use them for battling";
 				TextNumber++;
 				break;
 
