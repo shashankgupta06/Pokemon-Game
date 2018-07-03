@@ -222,7 +222,7 @@ TextureImporter:
     21300430: indoor_215
     21300432: indoor_216
     21300434: indoor_217
-    21300436: indoor_218
+    21300436: sofa1_!
     21300438: indoor_219
     21300440: indoor_220
     21300442: indoor_221
@@ -238,7 +238,7 @@ TextureImporter:
     21300462: indoor_231
     21300464: indoor_232
     21300466: indoor_233
-    21300468: indoor_234
+    21300468: Sofa1_2
     21300470: indoor_235
     21300472: indoor_236
     21300474: indoor_237
@@ -252,7 +252,7 @@ TextureImporter:
     21300490: indoor_245
     21300492: indoor_246
     21300494: indoor_247
-    21300496: indoor_248
+    21300496: sofa1_3
     21300498: indoor_249
     21300500: indoor_250
     21300502: indoor_251
@@ -414,8 +414,8 @@ TextureImporter:
     21300814: Bed1_5
     21300816: Bed1_6
     21300818: indoor_409
-    21300820: indoor_410
-    21300822: indoor_411
+    21300820: Table1_1
+    21300822: Table1_2
     21300824: indoor_412
     21300826: indoor_413
     21300828: indoor_414
@@ -427,8 +427,8 @@ TextureImporter:
     21300840: Bed1_8
     21300842: Bed1_9
     21300844: indoor_422
-    21300846: indoor_423
-    21300848: indoor_424
+    21300846: Table1_3
+    21300848: Table1_4
     21300850: indoor_425
     21300852: indoor_426
     21300854: indoor_427
@@ -3626,7 +3626,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_218
+      name: sofa1_!
       rect:
         serializedVersion: 2
         x: 32
@@ -3850,7 +3850,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_234
+      name: Sofa1_2
       rect:
         serializedVersion: 2
         x: 32
@@ -4046,7 +4046,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_248
+      name: sofa1_3
       rect:
         serializedVersion: 2
         x: 32
@@ -6314,7 +6314,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_410
+      name: Table1_1
       rect:
         serializedVersion: 2
         x: 64
@@ -6328,7 +6328,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_411
+      name: Table1_2
       rect:
         serializedVersion: 2
         x: 80
@@ -6496,7 +6496,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_423
+      name: Table1_3
       rect:
         serializedVersion: 2
         x: 64
@@ -6510,7 +6510,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_424
+      name: Table1_4
       rect:
         serializedVersion: 2
         x: 80
