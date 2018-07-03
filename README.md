@@ -9,7 +9,7 @@ Character Movement
 Main Menu Layout                                      
 Character Creation                                    
 Pokemon spawning in the grass   
-OakScene Walkthrough Scene
+Player House 2nd floor
 
 
  Features to Work on Immediately:
@@ -18,5 +18,4 @@ OakScene Walkthrough Scene
  Interior of pallet town buildings
 
 Currently working on:
-
-Interior of Pallet town buildings
+Player House bottom level
