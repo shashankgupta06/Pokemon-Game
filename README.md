@@ -8,7 +8,8 @@ Pallet Town Exterior
 Character Movement                                   
 Main Menu Layout                                      
 Character Creation                                    
-Pokemon spawning in the grass                         
+Pokemon spawning in the grass   
+Player House 2nd floor
 
 
  Features to Work on Immediately:
@@ -17,5 +18,4 @@ Pokemon spawning in the grass
  Interior of pallet town buildings
 
 Currently working on:
-
-OakScene Walkthrough Text
+Player House bottom level
