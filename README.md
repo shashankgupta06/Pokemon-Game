@@ -11,6 +11,7 @@ Character Creation
 Pokemon spawning in the grass   
 Player House 2nd floor
 Player House Bottom level
+Making the scene shift from oak scene to playerhousetoplevel
 
  Features to Work on Immediately:
  
@@ -19,4 +20,4 @@ Player House Bottom level
 
 Currently working on:
 
-Making the scene shift from oak scene to playerhousetoplevel
+Starting the game at the right spot and making the players house interactable (Starting the game right)!
