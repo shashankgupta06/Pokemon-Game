@@ -10,7 +10,7 @@ Main Menu Layout
 Character Creation                                    
 Pokemon spawning in the grass   
 Player House 2nd floor
-
+Player House Bottom level
 
  Features to Work on Immediately:
  
@@ -18,4 +18,4 @@ Player House 2nd floor
  Interior of pallet town buildings
 
 Currently working on:
-Player House bottom level
+Making the scene shift from oak scene to playerhousetoplevel
