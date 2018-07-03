@@ -18,10 +18,12 @@ public class InputFieldText : MonoBehaviour {
 	void Update () {
 
 
-		if (Input.GetKeyDown(KeyCode.Return)) {
+		if (Input.GetKeyDown (KeyCode.Return) && mainInputField.text.Length != 0) {
 			PlayerPrefs.SetString ("PlayerName", mainInputField.text);
 			Debug.Log (mainInputField.text);
 			SceneManager.LoadScene ("OakWalkThrough");
+		} else if(Input.GetKeyDown (KeyCode.Return) && mainInputField.text.Length == 0){
+			Debug.Log ("Name Required");
 		}
 
 	}
