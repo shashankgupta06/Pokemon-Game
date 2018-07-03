@@ -39,7 +39,7 @@ TextureImporter:
     21300064: indoor_32
     21300066: indoor_33
     21300068: Wall1_2
-    21300070: indoor_35
+    21300070: CheckList1_1
     21300072: indoor_36
     21300074: indoor_37
     21300076: indoor_38
@@ -55,7 +55,7 @@ TextureImporter:
     21300096: indoor_48
     21300098: indoor_49
     21300100: Wall1_1
-    21300102: indoor_51
+    21300102: CheckList1_2
     21300104: indoor_52
     21300106: indoor_53
     21300108: indoor_54
@@ -65,12 +65,12 @@ TextureImporter:
     21300116: indoor_58
     21300118: indoor_59
     21300120: Window1_!
-    21300122: indoor_61
+    21300122: Painting1_1
     21300124: WorldMap_1
     21300126: WorldMap_2
     21300128: indoor_64
-    21300130: indoor_65
-    21300132: indoor_66
+    21300130: Painting2_1
+    21300132: Painting2_2
     21300134: indoor_67
     21300136: indoor_68
     21300138: indoor_69
@@ -81,12 +81,12 @@ TextureImporter:
     21300148: indoor_74
     21300150: indoor_75
     21300152: Window1_2
-    21300154: indoor_77
+    21300154: Painting1_2
     21300156: WorldMap_3
     21300158: WorldMap_4
     21300160: indoor_80
-    21300162: indoor_81
-    21300164: indoor_82
+    21300162: painting2_3
+    21300164: painting2_4
     21300166: indoor_83
     21300168: indoor_84
     21300170: indoor_85
@@ -144,8 +144,8 @@ TextureImporter:
     21300274: indoor_137
     21300276: indoor_138
     21300278: indoor_139
-    21300280: indoor_140
-    21300282: indoor_141
+    21300280: Sink1_1
+    21300282: Sink1_2
     21300284: TV1_1
     21300286: indoor_143
     21300288: indoor_144
@@ -160,8 +160,8 @@ TextureImporter:
     21300306: indoor_153
     21300308: indoor_154
     21300310: indoor_155
-    21300312: indoor_156
-    21300314: indoor_157
+    21300312: Sink1_3
+    21300314: Sink1_4
     21300316: TV1_2
     21300318: indoor_159
     21300320: indoor_160
@@ -177,7 +177,7 @@ TextureImporter:
     21300340: indoor_170
     21300342: indoor_171
     21300344: indoor_172
-    21300346: indoor_173
+    21300346: Fridge1
     21300348: TV1_3
     21300350: indoor_175
     21300352: indoor_176
@@ -191,7 +191,7 @@ TextureImporter:
     21300368: indoor_184
     21300370: indoor_185
     21300372: indoor_186
-    21300374: indoor_187
+    21300374: Fridge2
     21300376: indoor_188
     21300378: indoor_189
     21300380: indoor_190
@@ -207,7 +207,7 @@ TextureImporter:
     21300400: indoor_200
     21300402: indoor_201
     21300404: indoor_202
-    21300406: indoor_203
+    21300406: Fridge3
     21300408: indoor_204
     21300410: indoor_205
     21300412: indoor_206
@@ -370,9 +370,9 @@ TextureImporter:
     21300726: indoor_363
     21300728: StairsDown1_1
     21300730: StairsDown1_2
-    21300732: indoor_366
-    21300734: indoor_367
-    21300736: indoor_368
+    21300732: StairsUp1_2
+    21300734: StairsUp1_3
+    21300736: StairsUp1_5
     21300738: indoor_369
     21300740: indoor_370
     21300742: indoor_371
@@ -383,9 +383,9 @@ TextureImporter:
     21300752: indoor_376
     21300754: StairsDown1_3
     21300756: StairsDown1_4
-    21300758: indoor_379
-    21300760: indoor_380
-    21300762: indoor_381
+    21300758: StairsUp1_1
+    21300760: StairsUp1_4
+    21300762: StairsUp1_6
     21300764: indoor_382
     21300766: indoor_383
     21300768: indoor_384
@@ -398,7 +398,7 @@ TextureImporter:
     21300782: Bed1_2
     21300784: Bed1_3
     21300786: indoor_393
-    21300788: indoor_394
+    21300788: Clock
     21300790: indoor_395
     21300792: indoor_396
     21300794: indoor_397
@@ -1064,7 +1064,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_35
+      name: CheckList1_1
       rect:
         serializedVersion: 2
         x: 112
@@ -1288,7 +1288,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_51
+      name: CheckList1_2
       rect:
         serializedVersion: 2
         x: 112
@@ -1428,7 +1428,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_61
+      name: Painting1_1
       rect:
         serializedVersion: 2
         x: 16
@@ -1484,7 +1484,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_65
+      name: Painting2_1
       rect:
         serializedVersion: 2
         x: 80
@@ -1498,7 +1498,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_66
+      name: Painting2_2
       rect:
         serializedVersion: 2
         x: 96
@@ -1652,7 +1652,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_77
+      name: Painting1_2
       rect:
         serializedVersion: 2
         x: 16
@@ -1708,7 +1708,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_81
+      name: painting2_3
       rect:
         serializedVersion: 2
         x: 80
@@ -1722,7 +1722,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_82
+      name: painting2_4
       rect:
         serializedVersion: 2
         x: 96
@@ -2534,7 +2534,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_140
+      name: Sink1_1
       rect:
         serializedVersion: 2
         x: 32
@@ -2548,7 +2548,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_141
+      name: Sink1_2
       rect:
         serializedVersion: 2
         x: 48
@@ -2758,7 +2758,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_156
+      name: Sink1_3
       rect:
         serializedVersion: 2
         x: 32
@@ -2772,7 +2772,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_157
+      name: Sink1_4
       rect:
         serializedVersion: 2
         x: 48
@@ -2996,7 +2996,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_173
+      name: Fridge1
       rect:
         serializedVersion: 2
         x: 48
@@ -3192,7 +3192,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_187
+      name: Fridge2
       rect:
         serializedVersion: 2
         x: 48
@@ -3416,7 +3416,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_203
+      name: Fridge3
       rect:
         serializedVersion: 2
         x: 48
@@ -5698,7 +5698,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_366
+      name: StairsUp1_2
       rect:
         serializedVersion: 2
         x: 80
@@ -5712,7 +5712,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_367
+      name: StairsUp1_3
       rect:
         serializedVersion: 2
         x: 96
@@ -5726,7 +5726,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_368
+      name: StairsUp1_5
       rect:
         serializedVersion: 2
         x: 112
@@ -5880,7 +5880,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_379
+      name: StairsUp1_1
       rect:
         serializedVersion: 2
         x: 80
@@ -5894,7 +5894,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_380
+      name: StairsUp1_4
       rect:
         serializedVersion: 2
         x: 96
@@ -5908,7 +5908,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_381
+      name: StairsUp1_6
       rect:
         serializedVersion: 2
         x: 112
@@ -6090,7 +6090,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_394
+      name: Clock
       rect:
         serializedVersion: 2
         x: 64
