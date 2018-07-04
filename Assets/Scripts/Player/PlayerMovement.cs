@@ -104,7 +104,6 @@ public class PlayerMovement : MonoBehaviour {
 
 	public IEnumerator Move(Transform entity)
 	{
-
 		//isMoving = true;
 		startPos = entity.position;
 		t = 0;
@@ -112,9 +111,8 @@ public class PlayerMovement : MonoBehaviour {
 
 
 		foreach (GameObject tree in trees) {
-
+			
 			if (gameObject.GetComponent<BoxCollider2D> ().IsTouching (tree.GetComponent<BoxCollider2D> ())) {         //solution to colliders?
-
 
 				//if (currentDir == Direction.North && System.Math.Sign(input.y) > 0) {
 					entity.position = Vector3.Lerp (startPos, startPos, t);
@@ -128,6 +126,7 @@ public class PlayerMovement : MonoBehaviour {
 
 			} else {
 				while (t < 1f) {
+					
 					isMoving = true;
 					endPos = new Vector3 (startPos.x + System.Math.Sign (input.x), startPos.y + System.Math.Sign (input.y), startPos.z);
 					t += Time.deltaTime * walkSpeed;

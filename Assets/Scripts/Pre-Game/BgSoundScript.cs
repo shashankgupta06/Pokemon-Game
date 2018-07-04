@@ -38,7 +38,7 @@ public class BgSoundScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (SceneManager.GetActiveScene().name == "main") 
+		if (SceneManager.GetActiveScene().name == "PlayerHouseTop") 
 		{
 			Destroy (this.gameObject);
 		}

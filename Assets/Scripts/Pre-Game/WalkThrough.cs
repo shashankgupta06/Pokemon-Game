@@ -24,23 +24,23 @@ public class WalkThrough : MonoBehaviour {
 			{
 
 			case 0:
-				WalkThroughText.text = "I am professor OAK and welcome to the world of POKEMON";
+				WalkThroughText.text = "I am professor OAK and welcome to the world of POKEMON!";
 				TextNumber++;
 				break;
 
 			
 			case 1:
-				WalkThroughText.text = "This world is inhabited far and wide by various different kinds of POKEMON";
+				WalkThroughText.text = "This world is inhabited far and wide by various different kinds of POKEMON.";
 				TextNumber++;
 				break;
 
 			case 2:
-				WalkThroughText.text = "Some use POKEMON as pets where as others use them for battling";
+				WalkThroughText.text = "Some use POKEMON as pets where as others use them for battling.";
 				TextNumber++;
 				break;
 
 			case 3:
-				WalkThroughText.text = "As for me, I study POKEMON as a profession";
+				WalkThroughText.text = "As for me, I study POKEMON as a profession.";
 				TextNumber++;
 				break;
 
@@ -51,7 +51,7 @@ public class WalkThrough : MonoBehaviour {
 			
 			
 			case 5:
-				SceneManager.LoadScene ("Main");
+				SceneManager.LoadScene ("PlayerHouseTop");
 				break;
 			
 			default:
