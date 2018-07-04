@@ -46,8 +46,8 @@ public class GameManager : MonoBehaviour {
 
 		BasePokemon battlePokemon = GetRandomPokemonFromList (GetPokemonByRarity (rarity));
 
-
-		player.GetComponent<PlayerMovement>().isAllowedToMove = false;
+        //TODO: Add another way to prevent the player for perfoming input while in battle screen.
+		//player.GetComponent<PlayerMovement>().isAllowedToMove = false;
 
 		GameObject dPoke = Instantiate (emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
 
