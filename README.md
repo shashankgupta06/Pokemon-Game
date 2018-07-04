@@ -19,4 +19,5 @@ Making the scene shift from oak scene to playerhousetoplevel
  Interior of pallet town buildings
 
 Currently working on:
+
 Making the top level of the players' house interactable
