@@ -19,5 +19,4 @@ Making the scene shift from oak scene to playerhousetoplevel
  Interior of pallet town buildings
 
 Currently working on:
-
-Starting the game at the right spot and making the players house interactable (Starting the game right)!
+Making the top level of the players' house interactable
