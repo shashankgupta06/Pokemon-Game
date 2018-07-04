@@ -46,8 +46,8 @@ public class GameManager : MonoBehaviour {
 
 		BasePokemon battlePokemon = GetRandomPokemonFromList (GetPokemonByRarity (rarity));
 
-
-		player.GetComponent<PlayerMovement>().isAllowedToMove = false;
+        //TODO: add a way to preven the player  from moviing while in battle
+		//player.GetComponent<PlayerMovement>().isAllowedToMove = false;
 
 		GameObject dPoke = Instantiate (emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
 
