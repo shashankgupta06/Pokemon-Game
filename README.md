@@ -15,6 +15,8 @@ Making the scene shift from oak scene to playerhousetoplevel
 
  Features to Work on Immediately:
  
+ Added collideable script to all the collideable objects in the game this far
+ 
  Collision is still a little faulty
  Interior of pallet town buildings
 
