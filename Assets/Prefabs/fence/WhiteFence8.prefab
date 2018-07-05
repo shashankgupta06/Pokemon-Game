@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4740862970796980}
   - component: {fileID: 212584142271029286}
   - component: {fileID: 61312968852581404}
+  - component: {fileID: 114180991925060122}
   m_Layer: 0
   m_Name: WhiteFence8
   m_TagString: Tree
@@ -66,6 +67,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114180991925060122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1210038441887944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a55b0baeae3c1b44db8a6f3b6b47671a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212584142271029286
 SpriteRenderer:
   m_ObjectHideFlags: 1
