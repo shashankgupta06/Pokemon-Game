@@ -84,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4306993336326972}
   - component: {fileID: 61155585852057028}
-  - component: {fileID: 114430013053991636}
+  - component: {fileID: 114608116253365638}
   m_Layer: 0
   m_Name: Tree1
   m_TagString: Tree
@@ -144,7 +144,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1673116850082816}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4561588790715564}
@@ -233,7 +233,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5633631, y: 1.0754056}
+  m_Offset: {x: -0.51333714, y: 1.0754056}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -244,9 +244,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8384628, y: 2.8491888}
+  m_Size: {x: 2.392023, y: 2.8491888}
   m_EdgeRadius: 0
---- !u!114 &114430013053991636
+--- !u!114 &114608116253365638
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
