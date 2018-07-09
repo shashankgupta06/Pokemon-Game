@@ -13,8 +13,8 @@ Player House 2nd floor
 Player House Bottom level
 Seamless shift of scenes between existing scenes
 
- Features to Work on Immediately:
+Features to Work on Immediately:
  
- complete interiors for the other buildings of pallet town
+complete interiors for the other buildings of pallet town
  
 
