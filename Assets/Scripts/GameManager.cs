@@ -43,9 +43,14 @@ public class GameManager : MonoBehaviour {
 			player.transform.position = new Vector3 (-17, -29, 0);
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
 			break;
-	
-			default:
+
+		case "GarysHouse":
+			player.transform.position = new Vector3 (-3, -29, 0);
+			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
 			break;
+
+		default:
+		break;
 			
 
 
