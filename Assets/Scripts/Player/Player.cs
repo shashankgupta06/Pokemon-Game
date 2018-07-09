@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-	public List<OwnedPokemon> ownedPokemon = new List<OwnedPokemon>();
-
+	public List<OwnedPokemon> ownedPokemon = new List<OwnedPokemon>();        //was public now set to private
+ 
 
 
 	// Use this for initialization
 	void Start () {
-		
+		//gameObject.GetComponent<Rigidbody2D> ().isKinematic = false;
+
 	}
 	
 	// Update is called once per frame

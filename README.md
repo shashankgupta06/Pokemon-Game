@@ -15,9 +15,4 @@ Making the scene shift from oak scene to playerhousetoplevel
 
  Features to Work on Immediately:
  
- Collision is still a little faulty
- Interior of pallet town buildings
 
-Currently working on:
-
-Making the top level of the players' house interactable

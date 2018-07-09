@@ -5,7 +5,20 @@ licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - playerCamera: {instanceID: 0}
+  - battleCamera: {instanceID: 0}
+  - player: {instanceID: 0}
+  - defencePodium: {instanceID: 0}
+  - attackPodium: {instanceID: 0}
+  - emptyPoke: {instanceID: 0}
+  - bm: {instanceID: 0}
+  - type: {instanceID: 0}
+  - PP: {instanceID: 0}
+  - pokemonName: {instanceID: 0}
+  - levelText: {instanceID: 0}
+  - updateText: {instanceID: 0}
+  - southSprite: {fileID: 21300040, guid: 2f3b174d83018d04885316e8867622f7, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
