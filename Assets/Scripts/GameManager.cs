@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -25,6 +26,15 @@ public class GameManager : MonoBehaviour {
 	public Text pokemonName;
 	public Text levelText;
 	public Text updateText;
+
+
+
+
+	void Awake()
+	{
+
+
+	}
 
 
 	// Use this for initialization

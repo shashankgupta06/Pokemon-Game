@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 222754279973515062}
   - component: {fileID: 114123494608326520}
   - component: {fileID: 61167122222477280}
+  - component: {fileID: 114191047758501368}
   m_Layer: 0
   m_Name: SignText
   m_TagString: Untagged
@@ -347,6 +348,7 @@ GameObject:
   - component: {fileID: 4009453104743270}
   - component: {fileID: 60951648780891836}
   - component: {fileID: 114550049929880812}
+  - component: {fileID: 61519737352920578}
   m_Layer: 0
   m_Name: house1
   m_TagString: Untagged
@@ -890,6 +892,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15320873, y: 0.11485481}
   m_EdgeRadius: 0
+--- !u!61 &61519737352920578
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1512448197466978}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -23.990835, y: -4.9694204}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9241295, y: 0.89883995}
+  m_EdgeRadius: 0
 --- !u!61 &61824528506398368
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -948,6 +975,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
+--- !u!114 &114191047758501368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1146439303180724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072f1aaf5e4f17c44a3fe828d8ba69f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 114123494608326520}
 --- !u!114 &114550049929880812
 MonoBehaviour:
   m_ObjectHideFlags: 1

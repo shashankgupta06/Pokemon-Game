@@ -7,10 +7,8 @@ public class playerBottomHouseStairs : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D c)
 	{
-		if (c.gameObject.name == "player") 
-		{
+		
 			SceneManager.LoadScene ("PlayerHouseTop");
-		}
 
 	}
 }

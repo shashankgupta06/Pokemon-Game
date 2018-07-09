@@ -8,11 +8,12 @@ public class PlayerTopHouseStairs : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D c)
 	{
-		if (c.gameObject.name == "player") 
-		{
-			SceneManager.LoadScene ("PlayerHouseBottom");
-		}
+			
+		     string currentScene = SceneManager.GetActiveScene ().name;
+		     PlayerPrefs.SetString ("LastScene", currentScene);
+		     PlayerPrefs.Save ();
 
+			 SceneManager.LoadScene ("PlayerHouseBottom");
 
 	}
 }
