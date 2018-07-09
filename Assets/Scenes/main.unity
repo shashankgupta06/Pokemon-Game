@@ -8211,7 +8211,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 186.20001, y: -78}
+  m_AnchoredPosition: {x: 186.20001, y: -77.999985}
   m_SizeDelta: {x: 103.8, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &340692388
@@ -10213,7 +10213,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4513011933397472, guid: f2887e61a2e6e294aa6271db9a51e332, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -30
+      value: -29
       objectReference: {fileID: 0}
     - target: {fileID: 4513011933397472, guid: f2887e61a2e6e294aa6271db9a51e332, type: 2}
       propertyPath: m_LocalPosition.z
@@ -24435,7 +24435,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 13.2599945, y: -0.0000039637}
+  m_AnchoredPosition: {x: 13.259996, y: -0.0000039637}
   m_SizeDelta: {x: 26.52, y: 28.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1058462151
@@ -29986,6 +29986,7 @@ MonoBehaviour:
   pokemonName: {fileID: 1848984737}
   levelText: {fileID: 1058462151}
   updateText: {fileID: 1845737452}
+  southSprite: {fileID: 21300040, guid: 2f3b174d83018d04885316e8867622f7, type: 3}
 --- !u!4 &1256259395
 Transform:
   m_ObjectHideFlags: 0
@@ -35880,7 +35881,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 94.2, y: -73.7}
+  m_AnchoredPosition: {x: 94.20001, y: -73.7}
   m_SizeDelta: {x: 163.4, y: 42.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1525169568
@@ -39191,31 +39192,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1736942768967382, guid: f2887e61a2e6e294aa6271db9a51e332,
     type: 2}
   m_PrefabInternal: {fileID: 463115534}
---- !u!61 &1667042283
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1667042282}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!4 &1667042284 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4513011933397472, guid: f2887e61a2e6e294aa6271db9a51e332,
@@ -43287,7 +43263,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 198.99998, y: -57}
+  m_AnchoredPosition: {x: 199, y: -57}
   m_SizeDelta: {x: 357, y: 83.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1845737452

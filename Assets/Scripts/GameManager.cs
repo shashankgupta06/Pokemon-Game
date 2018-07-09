@@ -27,12 +27,30 @@ public class GameManager : MonoBehaviour {
 	public Text levelText;
 	public Text updateText;
 
+	public Sprite southSprite;
 
+	string LastScene;
 
 
 	void Awake()
 	{
+		LastScene = PlayerPrefs.GetString ("LastScene", "");
+		Debug.Log (LastScene);
 
+		switch (LastScene) 
+		{
+		case "PlayerHouseBottom":
+			player.transform.position = new Vector3 (-17, -29, 0);
+			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
+			break;
+	
+			default:
+			break;
+			
+
+
+
+		}
 
 	}
 
