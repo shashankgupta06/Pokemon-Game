@@ -11,8 +11,10 @@ Character Creation
 Pokemon spawning in the grass   
 Player House 2nd floor
 Player House Bottom level
-Making the scene shift from oak scene to playerhousetoplevel
+Seamless shift of scenes between existing scenes
 
  Features to Work on Immediately:
+ 
+ complete interiors for the other buildings of pallet town
  
 
