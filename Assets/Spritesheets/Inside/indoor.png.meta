@@ -4,7 +4,7 @@ timeCreated: 1460357793
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: indoor_0
+    21300000: pokeball
     21300002: Floor1_1
     21300004: indoor_2
     21300006: indoor_3
@@ -13,7 +13,7 @@ TextureImporter:
     21300012: indoor_6
     21300014: indoor_7
     21300016: indoor_8
-    21300018: indoor_9
+    21300018: OakLabFloor1_1
     21300020: indoor_10
     21300022: indoor_11
     21300024: indoor_12
@@ -108,12 +108,12 @@ TextureImporter:
     21300202: indoor_101
     21300204: indoor_102
     21300206: indoor_103
-    21300208: indoor_104
-    21300210: indoor_105
+    21300208: OakLabFloor3_1
+    21300210: OakLabFloor3_2
     21300212: indoor_106
-    21300214: indoor_107
-    21300216: indoor_108
-    21300218: indoor_109
+    21300214: OakLabFloor2_1
+    21300216: OakLabFloor2_2
+    21300218: OakLabFloor2_3
     21300220: indoor_110
     21300222: indoor_111
     21300224: indoor_112
@@ -125,9 +125,9 @@ TextureImporter:
     21300236: indoor_118
     21300238: indoor_119
     21300240: indoor_120
-    21300242: indoor_121
-    21300244: indoor_122
-    21300246: indoor_123
+    21300242: OakLabFloor2_4
+    21300244: OakLabFloor2_5
+    21300246: OakLabFloor2_6
     21300248: indoor_124
     21300250: indoor_125
     21300252: indoor_126
@@ -139,9 +139,9 @@ TextureImporter:
     21300264: indoor_132
     21300266: indoor_133
     21300268: indoor_134
-    21300270: indoor_135
-    21300272: indoor_136
-    21300274: indoor_137
+    21300270: OakLabFloor2_7
+    21300272: OakLabFloor2_8
+    21300274: OakLabFloor2_9
     21300276: indoor_138
     21300278: indoor_139
     21300280: Sink1_1
@@ -149,7 +149,7 @@ TextureImporter:
     21300284: TV1_1
     21300286: indoor_143
     21300288: indoor_144
-    21300290: indoor_145
+    21300290: Computer1_1
     21300292: indoor_146
     21300294: indoor_147
     21300296: indoor_148
@@ -165,7 +165,7 @@ TextureImporter:
     21300316: TV1_2
     21300318: indoor_159
     21300320: indoor_160
-    21300322: indoor_161
+    21300322: computer1_2
     21300324: indoor_162
     21300326: indoor_163
     21300328: indoor_164
@@ -181,15 +181,15 @@ TextureImporter:
     21300348: TV1_3
     21300350: indoor_175
     21300352: indoor_176
-    21300354: indoor_177
+    21300354: computer1_3
     21300356: indoor_178
     21300358: indoor_179
     21300360: indoor_180
     21300362: indoor_181
     21300364: indoor_182
     21300366: indoor_183
-    21300368: indoor_184
-    21300370: indoor_185
+    21300368: Machine1_1
+    21300370: Machine2_1
     21300372: indoor_186
     21300374: Fridge2
     21300376: indoor_188
@@ -204,14 +204,14 @@ TextureImporter:
     21300394: indoor_197
     21300396: indoor_198
     21300398: indoor_199
-    21300400: indoor_200
-    21300402: indoor_201
+    21300400: Machine1_2
+    21300402: Machine2_2
     21300404: indoor_202
     21300406: Fridge3
     21300408: indoor_204
     21300410: indoor_205
     21300412: indoor_206
-    21300414: indoor_207
+    21300414: Books
     21300416: indoor_208
     21300418: indoor_209
     21300420: indoor_210
@@ -220,12 +220,12 @@ TextureImporter:
     21300426: indoor_213
     21300428: indoor_214
     21300430: indoor_215
-    21300432: indoor_216
-    21300434: indoor_217
+    21300432: OakMachine1_1
+    21300434: OakMachine1_2
     21300436: sofa1_!
     21300438: indoor_219
-    21300440: indoor_220
-    21300442: indoor_221
+    21300440: OakLabCase_1
+    21300442: OakLabCase_2
     21300444: indoor_222
     21300446: indoor_223
     21300448: indoor_224
@@ -236,12 +236,12 @@ TextureImporter:
     21300458: indoor_229
     21300460: indoor_230
     21300462: indoor_231
-    21300464: indoor_232
-    21300466: indoor_233
+    21300464: OakMachine1_3
+    21300466: OakMachine1_4
     21300468: Sofa1_2
     21300470: indoor_235
-    21300472: indoor_236
-    21300474: indoor_237
+    21300472: OakLabCase_3
+    21300474: OakLabCase_4
     21300476: indoor_238
     21300478: indoor_239
     21300480: carpet1_4
@@ -250,12 +250,12 @@ TextureImporter:
     21300486: indoor_243
     21300488: indoor_244
     21300490: indoor_245
-    21300492: indoor_246
-    21300494: indoor_247
+    21300492: OakMachine1_5
+    21300494: OakMachine1_6
     21300496: sofa1_3
     21300498: indoor_249
-    21300500: indoor_250
-    21300502: indoor_251
+    21300500: OakLabCase_5
+    21300502: OakLabCase_6
     21300504: indoor_252
     21300506: indoor_253
     21300508: indoor_254
@@ -574,7 +574,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: indoor_0
+      name: pokeball
       rect:
         serializedVersion: 2
         x: 16
@@ -700,7 +700,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_9
+      name: OakLabFloor1_1
       rect:
         serializedVersion: 2
         x: 176
@@ -2030,7 +2030,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_104
+      name: OakLabFloor3_1
       rect:
         serializedVersion: 2
         x: 128
@@ -2044,7 +2044,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_105
+      name: OakLabFloor3_2
       rect:
         serializedVersion: 2
         x: 144
@@ -2072,7 +2072,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_107
+      name: OakLabFloor2_1
       rect:
         serializedVersion: 2
         x: 176
@@ -2086,10 +2086,10 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_108
+      name: OakLabFloor2_2
       rect:
         serializedVersion: 2
-        x: 192
+        x: 193
         y: 448
         width: 16
         height: 16
@@ -2100,7 +2100,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_109
+      name: OakLabFloor2_3
       rect:
         serializedVersion: 2
         x: 208
@@ -2268,7 +2268,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_121
+      name: OakLabFloor2_4
       rect:
         serializedVersion: 2
         x: 176
@@ -2282,7 +2282,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_122
+      name: OakLabFloor2_5
       rect:
         serializedVersion: 2
         x: 192
@@ -2296,7 +2296,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_123
+      name: OakLabFloor2_6
       rect:
         serializedVersion: 2
         x: 208
@@ -2464,7 +2464,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_135
+      name: OakLabFloor2_7
       rect:
         serializedVersion: 2
         x: 176
@@ -2478,7 +2478,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_136
+      name: OakLabFloor2_8
       rect:
         serializedVersion: 2
         x: 192
@@ -2492,7 +2492,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_137
+      name: OakLabFloor2_9
       rect:
         serializedVersion: 2
         x: 208
@@ -2604,7 +2604,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_145
+      name: Computer1_1
       rect:
         serializedVersion: 2
         x: 112
@@ -2828,7 +2828,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_161
+      name: computer1_2
       rect:
         serializedVersion: 2
         x: 112
@@ -3052,7 +3052,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_177
+      name: computer1_3
       rect:
         serializedVersion: 2
         x: 112
@@ -3150,7 +3150,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_184
+      name: Machine1_1
       rect:
         serializedVersion: 2
         x: 0
@@ -3164,7 +3164,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_185
+      name: Machine2_1
       rect:
         serializedVersion: 2
         x: 16
@@ -3374,7 +3374,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_200
+      name: Machine1_2
       rect:
         serializedVersion: 2
         x: 0
@@ -3388,7 +3388,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_201
+      name: Machine2_2
       rect:
         serializedVersion: 2
         x: 16
@@ -3472,7 +3472,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_207
+      name: Books
       rect:
         serializedVersion: 2
         x: 112
@@ -3598,7 +3598,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_216
+      name: OakMachine1_1
       rect:
         serializedVersion: 2
         x: 0
@@ -3612,7 +3612,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_217
+      name: OakMachine1_2
       rect:
         serializedVersion: 2
         x: 16
@@ -3654,7 +3654,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_220
+      name: OakLabCase_1
       rect:
         serializedVersion: 2
         x: 64
@@ -3668,7 +3668,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_221
+      name: OakLabCase_2
       rect:
         serializedVersion: 2
         x: 80
@@ -3822,7 +3822,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_232
+      name: OakMachine1_3
       rect:
         serializedVersion: 2
         x: 0
@@ -3836,7 +3836,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_233
+      name: OakMachine1_4
       rect:
         serializedVersion: 2
         x: 16
@@ -3878,7 +3878,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_236
+      name: OakLabCase_3
       rect:
         serializedVersion: 2
         x: 64
@@ -3892,7 +3892,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_237
+      name: OakLabCase_4
       rect:
         serializedVersion: 2
         x: 80
@@ -4018,7 +4018,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_246
+      name: OakMachine1_5
       rect:
         serializedVersion: 2
         x: 0
@@ -4032,7 +4032,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_247
+      name: OakMachine1_6
       rect:
         serializedVersion: 2
         x: 16
@@ -4074,7 +4074,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_250
+      name: OakLabCase_5
       rect:
         serializedVersion: 2
         x: 64
@@ -4088,7 +4088,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: indoor_251
+      name: OakLabCase_6
       rect:
         serializedVersion: 2
         x: 80

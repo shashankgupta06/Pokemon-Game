@@ -9,7 +9,7 @@ public class CarpetCollider : MonoBehaviour {
 
 
 	void Update(){
-		if (player.GetComponent<BoxCollider2D> ().IsTouching (gameObject.GetComponent<BoxCollider2D> ()) && player.GetComponent<SpriteRenderer> ().sprite.name == "South_0") {
+		if (player.GetComponent<BoxCollider2D> ().IsTouching (gameObject.GetComponent<BoxCollider2D> ()) && (player.GetComponent<SpriteRenderer> ().sprite.name == "South_0" ||player.GetComponent<SpriteRenderer> ().sprite.name == "South_1" ||player.GetComponent<SpriteRenderer> ().sprite.name == "South_2")) {
 			string currentScene = SceneManager.GetActiveScene ().name;
 			PlayerPrefs.SetString ("LastScene", currentScene);
 			PlayerPrefs.Save ();

@@ -11,6 +11,14 @@ public class PlayerMovement : MonoBehaviour
     public Sprite southSprite;
     public Sprite eastSprite;
     public Sprite westSprite;
+	public Sprite northWalk1;
+	public Sprite northWalk2;
+	public Sprite southWalk1;
+	public Sprite southWalk2;
+	public Sprite eastWalk1;
+	public Sprite eastWalk2;
+	public Sprite westWalk1;
+	public Sprite westWalk2;
 
     public float walkSpeed = 5f;
 
@@ -18,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     /// Determine if the player is currently in the moving animation
     /// </summary>
     private bool IsMoving = false;
-
+	private bool Walk = false;
     private SpriteRenderer spriteRender;
 
     private void Awake()
@@ -47,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 dir = input.normalized;
 
-        dir = new Vector2(dir.x / 2, dir.y / 2);
+        dir = new Vector2(dir.x / 1, dir.y / 1);
 
         SwapSpriteByDirection(dir);
 
@@ -57,21 +65,47 @@ public class PlayerMovement : MonoBehaviour
 
     private void SwapSpriteByDirection(Vector2 direction)
     {
+		
+
         if (direction.x > 0)
         {
-            spriteRender.sprite = eastSprite;
+			if (Walk) {
+				spriteRender.sprite = eastWalk1;
+				Walk = false;
+			} else {
+				spriteRender.sprite = eastWalk2;
+				Walk = true;
+			}
         }
         else if (direction.x < 0)
         {
-            spriteRender.sprite = westSprite;
+			if (Walk) {
+				spriteRender.sprite = westWalk1;
+				Walk = false;
+			} else {
+				spriteRender.sprite = westWalk2;
+				Walk = true;
+			}
         }
         else if (direction.y > 0)
         {
-            spriteRender.sprite = northSprite;
+			if (Walk) {
+				spriteRender.sprite = northWalk1;
+				Walk = false;
+			} else {
+				spriteRender.sprite = northWalk2;
+				Walk = true;
+			}
         }
         else if (direction.y < 0)
         {
-            spriteRender.sprite = southSprite;
+			if (Walk) {
+				spriteRender.sprite = southWalk1;
+				Walk = false;
+			} else {
+				spriteRender.sprite = southWalk2;
+				Walk = true;
+			}
         }
     }
 
@@ -80,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
 
         // check if the player can even move there
 
-        RaycastHit2D[] ray = Physics2D.RaycastAll(gameObject.transform.position, direction, 0.5f);
+        RaycastHit2D[] ray = Physics2D.RaycastAll(gameObject.transform.position, direction, 1f);           //player moves by 0.5
         bool pathBlocked = ray.Any(i => i.collider.GetComponent<Collidable>() != null);
         if (pathBlocked) return;
 
@@ -99,10 +133,53 @@ public class PlayerMovement : MonoBehaviour
         {
             t += Time.deltaTime * rate;
             gameObject.transform.position = Vector2.MoveTowards(start, goal, t);
+
             yield return new WaitForFixedUpdate();
         }
 
+	 
+
+
         IsMoving = false;
+
+		switch (spriteRender.sprite.name) 
+		{
+
+		case "North_1":
+			spriteRender.sprite = northSprite;
+			break;
+		case "North_2":
+			spriteRender.sprite = northSprite;
+			break;
+		
+		case "East_1":
+			spriteRender.sprite = eastSprite;
+			break;
+		case "East_2":
+			spriteRender.sprite = eastSprite;
+			break;
+
+		case "West_1":
+			spriteRender.sprite = westSprite;
+			break;
+		case "West_2":
+			spriteRender.sprite = westSprite;
+			break;
+
+
+		case "South_1":
+			spriteRender.sprite = southSprite;
+			break;
+		case "South_2":
+			spriteRender.sprite = southSprite;
+			break;
+
+		default:
+			break;
+
+
+		}
+	
 
     }
 }

@@ -5,8 +5,8 @@ licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
     21300000: North_0
-    21300002: Char_1
-    21300004: Char_2
+    21300002: North_1
+    21300004: North_2
     21300006: Char_3
     21300008: Char_4
     21300010: Char_5
@@ -25,8 +25,8 @@ TextureImporter:
     21300036: Char_18
     21300038: Char_19
     21300040: South_0
-    21300042: Char_21
-    21300044: Char_22
+    21300042: South_1
+    21300044: South_2
     21300046: Char_23
     21300048: Char_24
     21300050: Char_25
@@ -48,8 +48,8 @@ TextureImporter:
     21300082: Char_41
     21300084: Char_42
     21300086: West_0
-    21300088: Char_44
-    21300090: Char_45
+    21300088: West_1
+    21300090: West_2
     21300092: Char_46
     21300094: Char_47
     21300096: Char_48
@@ -70,8 +70,8 @@ TextureImporter:
     21300126: Char_63
     21300128: Char_64
     21300130: east_0
-    21300132: Char_66
-    21300134: Char_67
+    21300132: East_1
+    21300134: East_2
     21300136: Char_68
     21300138: Char_69
     21300140: Char_70
@@ -224,7 +224,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Char_1
+      name: North_1
       rect:
         serializedVersion: 2
         x: 32
@@ -238,7 +238,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Char_2
+      name: North_2
       rect:
         serializedVersion: 2
         x: 64
@@ -504,7 +504,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Char_21
+      name: South_1
       rect:
         serializedVersion: 2
         x: 32
@@ -518,7 +518,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Char_22
+      name: South_2
       rect:
         serializedVersion: 2
         x: 64
@@ -815,8 +815,8 @@ TextureImporter:
       name: West_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 181
+        x: 1
+        y: 182
         width: 32
         height: 32
       alignment: 0
@@ -826,7 +826,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Char_44
+      name: West_1
       rect:
         serializedVersion: 2
         x: 32
@@ -840,7 +840,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Char_45
+      name: West_2
       rect:
         serializedVersion: 2
         x: 64
@@ -1134,7 +1134,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Char_66
+      name: East_1
       rect:
         serializedVersion: 2
         x: 32
@@ -1148,7 +1148,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Char_67
+      name: East_2
       rect:
         serializedVersion: 2
         x: 64
@@ -2122,7 +2122,7 @@ TextureImporter:
         width: 5
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2136,7 +2136,7 @@ TextureImporter:
         width: 9
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2150,7 +2150,7 @@ TextureImporter:
         width: 33
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

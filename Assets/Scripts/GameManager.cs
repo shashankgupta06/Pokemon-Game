@@ -49,6 +49,11 @@ public class GameManager : MonoBehaviour {
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
 			break;
 
+		case "OakLab":
+			player.transform.position = new Vector3 (-6, -40, 0);
+			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
+			break;
+
 		default:
 		break;
 			
