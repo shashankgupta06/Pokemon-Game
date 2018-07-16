@@ -11,7 +11,7 @@ public class SignCollider : MonoBehaviour {
 	// Update is called once per frame
 	void OnTriggerEnter2D(Collider2D c)
 	{
-		if (player.GetComponent<SpriteRenderer> ().sprite.name == "North_0") {
+		if (player.GetComponent<SpriteRenderer> ().sprite.name == "North_0" || player.GetComponent<SpriteRenderer> ().sprite.name == "North_1" || player.GetComponent<SpriteRenderer> ().sprite.name == "North_2") {
 			canvas.SetActive (true);
 			canvas.GetComponentInChildren<Text> ().text = gameObject.GetComponent<Text> ().text;
 		}

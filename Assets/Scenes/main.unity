@@ -8122,7 +8122,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 186.20001, y: -78}
+  m_AnchoredPosition: {x: 186.20001, y: -77.999985}
   m_SizeDelta: {x: 103.8, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &340692388
@@ -24277,7 +24277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 13.2599945, y: -0.0000039637}
+  m_AnchoredPosition: {x: 13.259996, y: -0.0000039637}
   m_SizeDelta: {x: 26.52, y: 28.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1058462151
@@ -35789,7 +35789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 94.2, y: -73.7}
+  m_AnchoredPosition: {x: 94.20001, y: -73.7}
   m_SizeDelta: {x: 163.4, y: 42.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1525169568
@@ -43166,7 +43166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 198.99998, y: -57}
+  m_AnchoredPosition: {x: 199, y: -57}
   m_SizeDelta: {x: 357, y: 83.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1845737452
@@ -46156,6 +46156,31 @@ Prefab:
         type: 2}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224616180695768496, guid: 99a0aae300d08f549a64995dcf11c598,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 61351571515317800, guid: 99a0aae300d08f549a64995dcf11c598,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.209548
+      objectReference: {fileID: 0}
+    - target: {fileID: 61351571515317800, guid: 99a0aae300d08f549a64995dcf11c598,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.31991386
+      objectReference: {fileID: 0}
+    - target: {fileID: 61351571515317800, guid: 99a0aae300d08f549a64995dcf11c598,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.04758072
+      objectReference: {fileID: 0}
+    - target: {fileID: 61351571515317800, guid: 99a0aae300d08f549a64995dcf11c598,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.49200153
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99a0aae300d08f549a64995dcf11c598, type: 2}
