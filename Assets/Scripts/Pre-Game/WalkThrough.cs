@@ -9,6 +9,7 @@ public class WalkThrough : MonoBehaviour {
 	public Text WalkThroughText;
 	private int TextNumber=0;
 	string playerName;
+	string LastScene;
 
 
 	void Start()
@@ -51,6 +52,9 @@ public class WalkThrough : MonoBehaviour {
 			
 			
 			case 5:
+				string currentScene = SceneManager.GetActiveScene ().name;
+				PlayerPrefs.SetString ("LastScene", currentScene);
+				PlayerPrefs.Save ();
 				SceneManager.LoadScene ("PlayerHouseTop");
 				break;
 			

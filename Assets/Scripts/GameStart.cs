@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerPositioner : MonoBehaviour {
+public class GameStart: MonoBehaviour {
 
 
 	public Sprite northSprite;
-	public Sprite westSprite;
+	public Sprite eastSprite;
 	public GameObject player;
 	string LastScene;
 
@@ -16,12 +16,12 @@ public class PlayerPositioner : MonoBehaviour {
 		Debug.Log (LastScene);
 
 
-		if (LastScene == "main") {
-			player.transform.position = new Vector3 (-5, -4, 0);
+		if (LastScene == "PlayerHouseBottom") {
+			player.transform.position = new Vector3 (5, 4, 0);
+			player.GetComponent<SpriteRenderer> ().sprite = eastSprite;
+		} else if (LastScene == "OakWalkThrough") {
+			player.transform.position = new Vector3 (-5, 1f, 0);
 			player.GetComponent<SpriteRenderer> ().sprite = northSprite;
-		} else if (LastScene == "PlayerHouseTop") {
-			player.transform.position = new Vector3 (5.5f, 4.5f, 0);
-			player.GetComponent<SpriteRenderer> ().sprite = westSprite;
 		}
 	}
 

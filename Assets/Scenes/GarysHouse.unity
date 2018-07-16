@@ -819,7 +819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   northSprite: {fileID: 21300000, guid: 2f3b174d83018d04885316e8867622f7, type: 3}
-  westSprite: {fileID: 21300086, guid: 2f3b174d83018d04885316e8867622f7, type: 3}
+  eastSprite: {fileID: 0}
   player: {fileID: 1923975299}
 --- !u!4 &54181926
 Transform:
@@ -16596,11 +16596,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4513011933397472, guid: f2887e61a2e6e294aa6271db9a51e332, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.12
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 4513011933397472, guid: f2887e61a2e6e294aa6271db9a51e332, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.11
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 4513011933397472, guid: f2887e61a2e6e294aa6271db9a51e332, type: 2}
       propertyPath: m_LocalPosition.z
@@ -16645,6 +16645,16 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4487269869168036, guid: f2887e61a2e6e294aa6271db9a51e332, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212953906752050616, guid: f2887e61a2e6e294aa6271db9a51e332,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2f3b174d83018d04885316e8867622f7,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2887e61a2e6e294aa6271db9a51e332, type: 2}
   m_IsPrefabParent: 0
