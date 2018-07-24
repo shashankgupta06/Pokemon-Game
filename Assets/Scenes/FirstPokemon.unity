@@ -166,6 +166,8 @@ MonoBehaviour:
   pokemonName: {fileID: 529866234}
   pokemonBaseStats: {fileID: 2086818382}
   charmander: {fileID: 4542596866144738, guid: 1e3924901e2fba74d95344bc509c224f, type: 2}
+  squirtle: {fileID: 0}
+  bulbasaur: {fileID: 0}
 --- !u!114 &245220980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -602,7 +604,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: df29aceee5636484a9e8003f116fa809, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0

@@ -10,36 +10,35 @@ public class FirstPokemonScene : MonoBehaviour
 	public Text pokemonName;
 	public Text pokemonBaseStats;
 	public Transform charmander;
+	public Transform squirtle;
+	public Transform bulbasaur;
 
+	private Transform Pokemon;
 	private string pokemon;
 
 	// Use this for initialization
 	void Awake ()
 	{
 		pokemon = PlayerPrefs.GetString ("FirstPokemon", "");
-		GameObject.Instantiate (charmander);
-		Debug.Log (pokemon);
-	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
 
 		switch (pokemon) {
 
 		case "Squirtle":
 			gameObject.GetComponent<Image> ().sprite = Squirtle;
+			Pokemon = squirtle;
 			PokemonStats (pokemon);
 
-			break;
+		 	break;
 
 		case "Charmander":
 			gameObject.GetComponent<Image> ().sprite = Charmander;
+			Pokemon = charmander;
 			PokemonStats (pokemon);
 			break;
 
 		case "Bulbasaur":
 			gameObject.GetComponent<Image> ().sprite = Bulbasaur;
+			Pokemon = bulbasaur;
 			PokemonStats (pokemon);
 			break;
 
@@ -47,8 +46,10 @@ public class FirstPokemonScene : MonoBehaviour
 			break;
 
 		}
-		
+
+		GameObject.Instantiate (Pokemon);
 	}
+
 
 
 
@@ -57,12 +58,12 @@ public class FirstPokemonScene : MonoBehaviour
 
 		pokemonName.text = pokemon;
 
-		pokemonBaseStats.text = "HP: " + charmander.GetComponent<BasePokemon> ().HP + "\n" +
-		"Attack: " + charmander.GetComponent<BasePokemon> ().pokemonStats.attackStat + "\n" +
-		"Defence: " + charmander.GetComponent<BasePokemon> ().pokemonStats.defenceStat + "\n" +
-		"Sp.Attack: " + charmander.GetComponent<BasePokemon> ().pokemonStats.spAttackStat + "\n" +
-		"Sp.Defence: " + charmander.GetComponent<BasePokemon> ().pokemonStats.spDefenceStat + "\n" +
-		"speed: " + charmander.GetComponent<BasePokemon> ().pokemonStats.speedStat;
+		pokemonBaseStats.text = "HP: " + Pokemon.GetComponent<BasePokemon> ().HP + "\n" +
+			"Attack: " + Pokemon.GetComponent<BasePokemon> ().pokemonStats.attackStat + "\n" +
+			"Defence: " + Pokemon.GetComponent<BasePokemon> ().pokemonStats.defenceStat + "\n" +
+			"Sp.Attack: " + Pokemon.GetComponent<BasePokemon> ().pokemonStats.spAttackStat + "\n" +
+			"Sp.Defence: " + Pokemon.GetComponent<BasePokemon> ().pokemonStats.spDefenceStat + "\n" +
+			"speed: " + Pokemon.GetComponent<BasePokemon> ().pokemonStats.speedStat;
 
 	}
 }
