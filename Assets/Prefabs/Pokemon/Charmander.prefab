@@ -57,25 +57,26 @@ MonoBehaviour:
   biomeFound: 0
   type: 4
   rarity: 0
-  HP: 0
+  HP: 39
   attackStat:
-    minimum: 0
-    maximum: 0
+    minimum: 50
+    maximum: 54
   defenceStat:
-    minimum: 0
-    maximum: 0
-  speed: 0
+    minimum: 40
+    maximum: 46
+  speed: 65
   pokemonStats:
-    attackStat: 0
-    defenceStat: 0
-    speedStat: 0
-    spAttackStat: 0
-    spDefenceStat: 0
+    attackStat: 52
+    defenceStat: 43
+    speedStat: 65
+    spAttackStat: 60
+    spDefenceStat: 50
     evasionStat: 0
   canEvolve: 0
   evolveTo:
     nextEvolution: {fileID: 0}
     levelUpLevel: 0
+  level: 1
 --- !u!212 &212413313666014912
 SpriteRenderer:
   m_ObjectHideFlags: 1
