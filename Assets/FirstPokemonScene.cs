@@ -9,6 +9,7 @@ public class FirstPokemonScene : MonoBehaviour
 	public Sprite Bulbasaur, Charmander, Squirtle;
 	public Text pokemonName;
 	public Text pokemonBaseStats;
+	public Text description;
 	public Transform charmander;
 	public Transform squirtle;
 	public Transform bulbasaur;
@@ -26,19 +27,21 @@ public class FirstPokemonScene : MonoBehaviour
 		case "Squirtle":
 			gameObject.GetComponent<Image> ().sprite = Squirtle;
 			Pokemon = squirtle;
+			description.text = "Water pokemon also remains fairly competitive throughout the game!";
 			PokemonStats (pokemon);
-
 		 	break;
 
 		case "Charmander":
 			gameObject.GetComponent<Image> ().sprite = Charmander;
 			Pokemon = charmander;
+			description.text = "Fire pokemon. starts weaker than the other pokemon but has the ability to out power them late game!";
 			PokemonStats (pokemon);
 			break;
 
 		case "Bulbasaur":
 			gameObject.GetComponent<Image> ().sprite = Bulbasaur;
 			Pokemon = bulbasaur;
+			description.text = "Grass pokemon. Strongest towards the start but might not stack up to the other pokemon late game!";
 			PokemonStats (pokemon);
 			break;
 

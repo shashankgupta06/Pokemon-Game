@@ -165,9 +165,10 @@ MonoBehaviour:
   Squirtle: {fileID: 21300012, guid: 7fd81ad725659d143aa4569c40a6d820, type: 3}
   pokemonName: {fileID: 529866234}
   pokemonBaseStats: {fileID: 2086818382}
+  description: {fileID: 397190273}
   charmander: {fileID: 4542596866144738, guid: 1e3924901e2fba74d95344bc509c224f, type: 2}
-  squirtle: {fileID: 0}
-  bulbasaur: {fileID: 0}
+  squirtle: {fileID: 4264620086794544, guid: ea4de0c21b377c348874ca5fb206945f, type: 2}
+  bulbasaur: {fileID: 4443096633692502, guid: 52bbba8efe2a96d40b7fb548c65396cc, type: 2}
 --- !u!114 &245220980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,6 +202,80 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 245220977}
+--- !u!1 &397190271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 397190272}
+  - component: {fileID: 397190274}
+  - component: {fileID: 397190273}
+  m_Layer: 5
+  m_Name: PokemonDescription
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &397190272
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397190271}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1702613813}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -75.85001, y: -82.75001}
+  m_SizeDelta: {x: 145.7, y: 81.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &397190273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397190271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: df29aceee5636484a9e8003f116fa809, type: 3}
+    m_FontSize: 12
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &397190274
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397190271}
 --- !u!1 &529866232
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,6 +583,7 @@ RectTransform:
   - {fileID: 245220978}
   - {fileID: 529866233}
   - {fileID: 2086818381}
+  - {fileID: 397190272}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -607,7 +683,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: df29aceee5636484a9e8003f116fa809, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
