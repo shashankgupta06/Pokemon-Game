@@ -12,8 +12,8 @@ Professor Oak Functionality
 
 Features to Work on Immediately:
  
-fix battle system. 
-bug fixing.
-add more pokemon to the collection.
+fix battle system
+bug fixing
+add more pokemon to the collection
  
 
