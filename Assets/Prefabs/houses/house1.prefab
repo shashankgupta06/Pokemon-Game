@@ -100,8 +100,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4163724128220834}
   - component: {fileID: 212451181226140790}
-  - component: {fileID: 8195094281875270608}
-  - component: {fileID: 2113883505685344718}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
@@ -2193,52 +2191,3 @@ RectTransform:
   m_AnchoredPosition: {x: 0.0000009536743, y: -0.00013926625}
   m_SizeDelta: {x: 100, y: 99.99976}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!19719996 &2113883505685344718
-TilemapCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1109572866963582}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
---- !u!1839735485 &8195094281875270608
-Tilemap:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1109572866963582}
-  m_Enabled: 1
-  m_Tiles: {}
-  m_AnimatedTiles: {}
-  m_TileAssetArray: []
-  m_TileSpriteArray: []
-  m_TileMatrixArray: []
-  m_TileColorArray: []
-  m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: 0, y: 0, z: 0}
-  m_Size: {x: 0, y: 0, z: 1}
-  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
-  m_TileOrientation: 0
-  m_TileOrientationMatrix:
-    e00: 1
-    e01: 0
-    e02: 0
-    e03: 0
-    e10: 0
-    e11: 1
-    e12: 0
-    e13: 0
-    e20: 0
-    e21: 0
-    e22: 1
-    e23: 0
-    e30: 0
-    e31: 0
-    e32: 0
-    e33: 1

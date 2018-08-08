@@ -1,0 +1,57 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class FirstPokemonConfirmButton : MonoBehaviour {
+
+
+	public OwnedPokemon ownedPokemon;
+	public PokemonMoves moves;
+	public GameObject player;
+	public GameObject pokemon;
+
+	private string pokemonName;
+	Button confirmButton;
+
+
+
+	void Awake()
+	{
+		player = GameObject.Find ("Player");
+		pokemon = GameObject.FindGameObjectWithTag ("pokemon");
+	}
+
+	// Use this for initialization
+	void Start () {
+
+		pokemonName = GameObject.Find ("PokemonName").GetComponent<Text> ().text.ToString();
+		confirmButton = gameObject.GetComponent<Button> ();
+		confirmButton.onClick.AddListener (TaskOnClick);
+
+	}
+	
+	// Update is called once per frame
+	void TaskOnClick () {
+
+		moves.Name = "Tackle";
+		moves.Category = MoveType.Physical;
+		moves.moveType = PokemonType.Normal;
+		moves.moveStat.minimum = 30;
+		moves.moveStat.maximum = 40;
+		moves.accuracy = 95;
+		moves.PP = 35;
+		moves.power = 35;
+
+		ownedPokemon.NickName = pokemonName;
+		ownedPokemon.ownedPokemon = GameObject.FindGameObjectWithTag ("pokemon").GetComponent<BasePokemon> ();
+		ownedPokemon.level = 1;
+		ownedPokemon.moves.Add (moves);
+
+
+		player.GetComponent<Player> ().ownedPokemon.Add (ownedPokemon);
+		pokemon.transform.parent = player.transform;
+
+	}
+}

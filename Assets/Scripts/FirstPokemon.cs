@@ -6,12 +6,18 @@ using UnityEngine.SceneManagement;
 public class FirstPokemon : MonoBehaviour
 {
 
-	public GameObject player;
+	private GameObject player;
 	private string pokeball;
 
 	void OnTriggerEnter2D(Collider2D c){
 		pokeball = gameObject.name;
 
+	}
+
+
+	void Awake()
+	{
+		player = GameObject.FindGameObjectWithTag ("Player");
 	}
 
 	void Update()

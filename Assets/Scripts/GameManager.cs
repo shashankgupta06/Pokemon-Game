@@ -7,10 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
 
-	public GameObject playerCamera;
 	public GameObject battleCamera;
-
-	public GameObject player;
 
 	public List<BasePokemon> allPokemon = new List<BasePokemon>();
 	public List<PokemonMoves> allMoves = new List<PokemonMoves>();
@@ -31,26 +28,30 @@ public class GameManager : MonoBehaviour {
 
 	string LastScene;
 
+	public GameObject player;
+	public GameObject playerCamera;
 
 	void Awake()
 	{
+
+		player = GameObject.FindGameObjectWithTag ("Player");
+		playerCamera = GameObject.FindGameObjectWithTag ("MainCamera");
 		LastScene = PlayerPrefs.GetString ("LastScene", "");
-		Debug.Log (LastScene);
 
 		switch (LastScene) 
 		{
 		case "PlayerHouseBottom":
-			player.transform.position = new Vector3 (-17, -29, 0);
+			player.transform.position = new Vector3 (-10, -22, 0);
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
 			break;
 
 		case "GarysHouse":
-			player.transform.position = new Vector3 (-3, -29, 0);
+			player.transform.position = new Vector3 (5, -22, 0);
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
 			break;
 
 		case "OakLab":
-			player.transform.position = new Vector3 (-6, -40, 0);
+			player.transform.position = new Vector3 (4, -32, 0);
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
 			break;
 
@@ -65,6 +66,45 @@ public class GameManager : MonoBehaviour {
 	}
 
 
+	void OnLevelWasLoaded()
+	{
+		StartCoroutine (Wait (0.3f));
+		Debug.Log (LastScene);
+
+	}
+
+	IEnumerator Wait(float n)
+	{
+
+		switch (LastScene) {
+		case "PlayerHouseBottom":
+			yield return new WaitForSeconds (n);
+			player.transform.position = new Vector3 (-10, -22, 0);
+			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
+			break;
+
+		case "GarysHouse":
+			yield return new WaitForSeconds (n);
+			player.transform.position = new Vector3 (5, -22, 0);
+			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
+			break;
+
+		case "OakLab":
+			yield return new WaitForSeconds (n);
+			player.transform.position = new Vector3 (4, -32, 0);
+			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
+			break;
+
+		default:
+			break;
+
+		}
+
+
+	}
+		
+
+
 	// Use this for initialization
 	void Start () {
 		playerCamera.SetActive (true);
@@ -75,6 +115,7 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
 
 
 	public void EnterBattle(Rarity rarity)

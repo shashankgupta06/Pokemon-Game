@@ -11,7 +11,6 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//gameObject.GetComponent<Rigidbody2D> ().isKinematic = false;
-
 	}
 	
 	// Update is called once per frame

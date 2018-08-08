@@ -13,7 +13,6 @@ public class PlayerHouseSignText : MonoBehaviour {
 	{
 		playerName = PlayerPrefs.GetString ("PlayerName","");
 		text.text = playerName + "'s house";
-		Debug.Log (playerName);
 
 	}
 

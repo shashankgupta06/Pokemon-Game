@@ -12,6 +12,12 @@ public class Oak : MonoBehaviour
 	private int textNumber = 0;
 
 
+	void Awake()
+	{
+		player = GameObject.FindGameObjectWithTag ("Player");
+	}
+
+
 	void Start ()
 	{
 
@@ -44,6 +50,10 @@ public class Oak : MonoBehaviour
 				case 2:
 					player.transform.Find ("Main Camera/PlayerInteraction/Interaction/Text").gameObject.GetComponent<Text> ().text = "Make your choice carefully as this will be your first pokemon and they all have different characteristics";
 					textNumber++;
+					break;
+
+				case 3:
+					player.transform.Find ("Main Camera/PlayerInteraction/Interaction/Text").gameObject.GetComponent<Text> ().text = "Goodluck";
 					break;
 
 				default:

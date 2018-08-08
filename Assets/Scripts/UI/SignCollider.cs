@@ -9,15 +9,30 @@ public class SignCollider : MonoBehaviour {
 	public Text townText;
 	public GameObject canvas;
 	// Update is called once per frame
+
+
+
+	void Update()
+	{
+
+		player = GameObject.Find ("Player");
+		canvas = player.transform.GetChild(0).transform.GetChild(0).gameObject;
+		townText = canvas.transform.GetChild (0).transform.Find ("Text").GetComponent<Text> ();
+
+		//Debug.Log (player.transform.Find("EnterTownSign/Text").GetComponent<Text>().text);
+
+	}
+
+
 	void OnTriggerEnter2D(Collider2D c)
 	{
 		if (player.GetComponent<SpriteRenderer> ().sprite.name == "North_0" || player.GetComponent<SpriteRenderer> ().sprite.name == "North_1" || player.GetComponent<SpriteRenderer> ().sprite.name == "North_2") {
-			canvas.SetActive (true);
+			canvas.GetComponent<Canvas> ().enabled = true;
 			canvas.GetComponentInChildren<Text> ().text = gameObject.GetComponent<Text> ().text;
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D c){
-		canvas.SetActive (false);
+		canvas.GetComponent<Canvas> ().enabled = false;
 	}
 }
