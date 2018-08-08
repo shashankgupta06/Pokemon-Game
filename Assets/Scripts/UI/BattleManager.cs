@@ -48,6 +48,12 @@ public class BattleManager : MonoBehaviour {
 	//public Text PokemonName;
 
 
+	void Awake()
+	{
+		player = GameObject.Find ("Player");
+
+	}
+
 
 	// Use this for initialization
 	void Start () {

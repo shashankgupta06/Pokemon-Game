@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PName: Squirtle
-  image: {fileID: 21300012, guid: 7fd81ad725659d143aa4569c40a6d820, type: 3}
+  image: {fileID: 21300012, guid: 1d010079b572de04c91fd23d7c457ffd, type: 3}
   biomeFound: 0
   type: 5
   rarity: 3
