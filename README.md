@@ -7,10 +7,14 @@ Completed:
 Main Menu
 Pallet town and town interaction completed
 professor oak sprite added
+Professor Oak Functionality
+
 
 
 Features to Work on Immediately:
  
-Professor Oak Functionality and fix battle system. 
+ and fix battle system. 
+ bug fixes
+ add more pokemon to the collection
  
 
