@@ -41,17 +41,17 @@ public class GameManager : MonoBehaviour {
 		switch (LastScene) 
 		{
 		case "PlayerHouseBottom":
-			player.transform.position = new Vector3 (-10, -22, 0);
+			player.transform.position = new Vector2 (-10.5f, -22.5f);
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
 			break;
 
 		case "GarysHouse":
-			player.transform.position = new Vector3 (5, -22, 0);
+			player.transform.position = new Vector2 (5.5f, -22.5f);
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
 			break;
 
 		case "OakLab":
-			player.transform.position = new Vector3 (4, -32, 0);
+			player.transform.position = new Vector2 (4.5f, -32.5f);
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
 			break;
 
@@ -79,19 +79,19 @@ public class GameManager : MonoBehaviour {
 		switch (LastScene) {
 		case "PlayerHouseBottom":
 			yield return new WaitForSeconds (n);
-			player.transform.position = new Vector3 (-10, -22, 0);
+			player.transform.position = new Vector3 (-10.5f, -22.5f, 0);
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
 			break;
 
 		case "GarysHouse":
 			yield return new WaitForSeconds (n);
-			player.transform.position = new Vector3 (5, -22, 0);
+			player.transform.position = new Vector3 (5.5f, -22.5f, 0);
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
 			break;
 
 		case "OakLab":
 			yield return new WaitForSeconds (n);
-			player.transform.position = new Vector3 (4, -32, 0);
+			player.transform.position = new Vector3 (4.5f, -32.5f, 0);
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
 			break;
 
@@ -124,6 +124,8 @@ public class GameManager : MonoBehaviour {
 		battleCamera.SetActive (true);
 
 		BasePokemon battlePokemon = GetRandomPokemonFromList (GetPokemonByRarity (rarity));
+
+		player.GetComponent<PlayerMovement> ().isAllowedToMove = false;
 
         //TODO: add a way to preven the player  from moviing while in battle
 		//player.GetComponent<PlayerMovement>().isAllowedToMove = false;

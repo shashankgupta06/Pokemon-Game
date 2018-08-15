@@ -473,7 +473,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c60a39b57c20546baf533bfbeea472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   ownedPokemon:
     NickName: 
     ownedPokemon: {fileID: 0}
@@ -489,6 +488,9 @@ MonoBehaviour:
     PP: 0
     power: 0
     accuracy: 0
+  player: {fileID: 0}
+  pokemon: {fileID: 0}
+  backButton: {fileID: 1652572379}
 --- !u!1 &704238783
 GameObject:
   m_ObjectHideFlags: 0

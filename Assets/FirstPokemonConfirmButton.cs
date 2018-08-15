@@ -11,9 +11,11 @@ public class FirstPokemonConfirmButton : MonoBehaviour {
 	public PokemonMoves moves;
 	public GameObject player;
 	public GameObject pokemon;
+	public Button backButton;
 
 	private string pokemonName;
 	Button confirmButton;
+
 
 
 
@@ -21,6 +23,10 @@ public class FirstPokemonConfirmButton : MonoBehaviour {
 	{
 		player = GameObject.Find ("Player");
 		pokemon = GameObject.FindGameObjectWithTag ("pokemon");
+
+		if (player.GetComponent<Player> ().ownedPokemon.Count != 0) {
+			gameObject.SetActive (false);
+		}
 	}
 
 	// Use this for initialization
@@ -32,7 +38,7 @@ public class FirstPokemonConfirmButton : MonoBehaviour {
 
 	}
 	
-	// Update is called once per frame
+
 	void TaskOnClick () {
 
 		moves.Name = "Tackle";
@@ -52,6 +58,10 @@ public class FirstPokemonConfirmButton : MonoBehaviour {
 
 		player.GetComponent<Player> ().ownedPokemon.Add (ownedPokemon);
 		pokemon.transform.parent = player.transform;
+
+		backButton.onClick.Invoke ();
+
+		PlayerPrefs.SetString ("ChosenPokemon", ownedPokemon.NickName);
 
 	}
 }

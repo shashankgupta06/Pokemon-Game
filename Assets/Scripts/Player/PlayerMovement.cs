@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -20,23 +21,33 @@ public class PlayerMovement : MonoBehaviour
 	public Sprite westWalk1;
 	public Sprite westWalk2;
 
+
     public float walkSpeed = 5f;
+
+	public bool isAllowedToMove;
 
     /// <summary>
     /// Determine if the player is currently in the moving animation
     /// </summary>
+	/// 
     private bool IsMoving = false;
 	private bool Walk = false;
     private SpriteRenderer spriteRender;
 
+	// Check if player entered scene fot the first time.
+	//private Boolean FirstTime = true;
+
     private void Awake()
     {
         spriteRender = GetComponent<SpriteRenderer>();
+		isAllowedToMove = true;
     }
+
 
 
     private void Update()
     {
+		if(isAllowedToMove == true)
         InputMovement();
     }
 
@@ -182,4 +193,6 @@ public class PlayerMovement : MonoBehaviour
 	
 
     }
+
+
 }

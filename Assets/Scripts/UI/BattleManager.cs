@@ -8,6 +8,11 @@ public class BattleManager : MonoBehaviour {
 	public BattleMenu currentMenu;
 	public GameObject player;
 
+
+	[Header("Cameras")]
+	public GameObject battleCamera;
+	public GameObject mainCamera;
+
 	[Header("Selection")]
 	public GameObject SelectionMenu;
 	public GameObject SelectionInfo;
@@ -51,6 +56,7 @@ public class BattleManager : MonoBehaviour {
 	void Awake()
 	{
 		player = GameObject.Find ("Player");
+		mainCamera = GameObject.Find ("Main Camera");
 
 	}
 
@@ -94,6 +100,16 @@ public class BattleManager : MonoBehaviour {
 			ChangeMenu (BattleMenu.Fight);
 		}
 
+		if (currentSelection == 4 && Input.GetKeyDown (KeyCode.Return)) 
+		{
+			Debug.Log ("RUN SELECTED");
+			battleCamera.SetActive (false);
+			mainCamera.SetActive (true);
+			player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
+			Destroy (GameObject.Find ("DefencePodium/emptyPoke(Clone)"));
+			Destroy (GameObject.Find ("AttackPodium/emptyPoke(Clone)"));
+		}
+
 		if (currentMenu == BattleMenu.Fight && Input.GetKeyDown (KeyCode.Backspace)) 
 		{
 			ChangeMenu (BattleMenu.Selection);
@@ -113,21 +129,21 @@ public class BattleManager : MonoBehaviour {
 				 break;
 
 			case 2:
-				moveO.text =  moveOT;
+				moveO.text =  player.GetComponent<Player>().ownedPokemon[0].moves[0].Name;
 				moveT.text = "> " +moveTT;
 				moveTH.text =  moveTHT;
 				moveF.text = moveFT;
 				break;
 
 			case 3:
-				moveO.text =  moveOT;
+				moveO.text =  player.GetComponent<Player>().ownedPokemon[0].moves[0].Name;
 				moveT.text =  moveTT;
 				moveTH.text = "> " + moveTHT;
 				moveF.text = moveFT;
 				break;
 
 			case 4:
-				moveO.text =  moveOT;
+				moveO.text =  player.GetComponent<Player>().ownedPokemon[0].moves[0].Name;
 				moveT.text =  moveTT;
 				moveTH.text =  moveTHT;
 				moveF.text = "> " +moveFT;

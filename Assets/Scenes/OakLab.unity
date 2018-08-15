@@ -1447,6 +1447,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db637e24e2328b409b87cad99e4bf15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pokeBall1: {fileID: 253857580}
+  pokeBall2: {fileID: 123085106}
+  pokeBall3: {fileID: 115267582}
 --- !u!61 &115267585
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1631,6 +1634,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db637e24e2328b409b87cad99e4bf15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pokeBall1: {fileID: 253857580}
+  pokeBall2: {fileID: 123085106}
+  pokeBall3: {fileID: 115267582}
 --- !u!61 &123085109
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3409,6 +3415,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4db637e24e2328b409b87cad99e4bf15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pokeBall1: {fileID: 253857580}
+  pokeBall2: {fileID: 123085106}
+  pokeBall3: {fileID: 115267582}
 --- !u!61 &253857584
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4057,6 +4066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34dc3db03778a0442b65e4dabd19fa8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!114 &352581119
 MonoBehaviour:
   m_ObjectHideFlags: 0

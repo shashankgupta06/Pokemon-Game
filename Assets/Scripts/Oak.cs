@@ -9,12 +9,25 @@ public class Oak : MonoBehaviour
 	public GameObject player;
 
 	private string playerName;
-	private int textNumber = 0;
+	private int textNumber;
+	private string pokemonName;
 
 
 	void Awake()
 	{
 		player = GameObject.FindGameObjectWithTag ("Player");
+	}
+
+	void OnLevelWasLoaded()
+	{
+
+		if (player.GetComponent<Player> ().ownedPokemon.Count == 0) {
+			textNumber = 0;
+		} else {
+			textNumber = 5;
+			pokemonName = player.GetComponent<Player> ().ownedPokemon [0].NickName;
+
+		}
 	}
 
 
@@ -54,6 +67,22 @@ public class Oak : MonoBehaviour
 
 				case 3:
 					player.transform.Find ("Main Camera/PlayerInteraction/Interaction/Text").gameObject.GetComponent<Text> ().text = "Goodluck";
+					textNumber++;
+					break;
+
+				case 4:
+					player.transform.Find ("Main Camera/PlayerInteraction").gameObject.SetActive (false);
+					textNumber = 0;
+					break;
+
+				case 5:
+					player.transform.Find ("Main Camera/PlayerInteraction/Interaction/Text").gameObject.GetComponent<Text> ().text = "Take care of that " + pokemonName;
+					textNumber++;
+					break;
+
+				case 6:
+					player.transform.Find ("Main Camera/PlayerInteraction").gameObject.SetActive (false);
+					textNumber = 5;
 					break;
 
 				default:

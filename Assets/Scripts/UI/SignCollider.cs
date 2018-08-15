@@ -12,7 +12,16 @@ public class SignCollider : MonoBehaviour {
 
 
 
-	void Update()
+	void Awake()        //take this out later
+	{
+		player = GameObject.Find ("Player");
+		canvas = player.transform.GetChild(0).transform.GetChild(0).gameObject;
+		townText = canvas.transform.GetChild (0).transform.Find ("Text").GetComponent<Text> ();
+
+
+	}
+
+	void OnLevelWasLoaded()
 	{
 
 		player = GameObject.Find ("Player");

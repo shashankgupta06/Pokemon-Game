@@ -17,14 +17,13 @@ public class PlayerPositioner : MonoBehaviour
 		player = GameObject.Find ("Player");
 		LastScene = PlayerPrefs.GetString ("LastScene", "");
 		pokemonOption = PlayerPrefs.GetString ("PokemonOption", "");
-		StartCoroutine (Wait (0.3f));
-
+		StartCoroutine (Wait (0.5f));
 
 	}
 
 	void Update ()
 	{
-
+		
 	}
 
 	IEnumerator Wait (float n)
