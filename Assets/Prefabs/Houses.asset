@@ -15,5 +15,6 @@ MonoBehaviour:
   - {fileID: 1115321384603948, guid: 498f8b2f405895345ba38df5e9e59692, type: 2}
   - {fileID: 1512448197466978, guid: d4891b5bdead43148ac3fbf57fc1acde, type: 2}
   - {fileID: 1154460516683446, guid: 99a0aae300d08f549a64995dcf11c598, type: 2}
+  - {fileID: 1851558764572904, guid: 6edd7d3d41d10f049ba1b8a90b6bf68d, type: 2}
   m_PerlinScale: 0.5
   m_Z: 0

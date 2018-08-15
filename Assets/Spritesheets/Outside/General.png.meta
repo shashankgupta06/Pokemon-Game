@@ -1361,10 +1361,10 @@ TextureImporter:
     21302708: General_1354
     21302710: General_1355
     21302712: General_1356
-    21302714: General_1357
-    21302716: General_1358
-    21302718: General_1359
-    21302720: General_1360
+    21302714: PassageWay1_1
+    21302716: PassageWay1_2
+    21302718: PassageWay1_3
+    21302720: PassageWay1_4
     21302722: General_1361
     21302724: General_1362
     21302726: General_1363
@@ -1398,10 +1398,10 @@ TextureImporter:
     21302782: General_1391
     21302784: General_1392
     21302786: General_1393
-    21302788: General_1394
-    21302790: General_1395
-    21302792: General_1396
-    21302794: General_1397
+    21302788: PassageWay1_5
+    21302790: PassageWay1_6
+    21302792: PassageWay1_7
+    21302794: PassageWay1_8
     21302796: General_1398
     21302798: General_1399
     21302800: General_1400
@@ -1435,10 +1435,10 @@ TextureImporter:
     21302856: General_1429
     21302858: General_1430
     21302860: General_1431
-    21302862: General_1432
-    21302864: General_1433
-    21302866: General_1434
-    21302868: General_1435
+    21302862: PassageWay1_9
+    21302864: PassageWay1_10
+    21302866: PassageWay1_11
+    21302868: PassageWay1_12
     21302870: General_1436
     21302872: General_1437
     21302874: General_1438
@@ -1474,10 +1474,10 @@ TextureImporter:
     21302934: General_1469
     21302936: General_1470
     21302938: General_1471
-    21302940: General_1472
-    21302942: General_1473
-    21302944: General_1474
-    21302946: General_1475
+    21302940: PassageWay1_13
+    21302942: PassageWay1_14
+    21302944: PassageWay1_15
+    21302946: PassageWay1_16
     21302948: General_1476
     21302950: General_1477
     21302952: General_1478
@@ -1512,10 +1512,10 @@ TextureImporter:
     21303010: General_1508
     21303012: General_1509
     21303014: General_1510
-    21303016: General_1511
-    21303018: General_1512
-    21303020: General_1513
-    21303022: General_1514
+    21303016: PassageWay1_17
+    21303018: PassageWay1_18
+    21303020: PassageWay1_19
+    21303022: PassageWay1_20
     21303024: General_1515
     21303026: General_1516
     21303028: General_1517
@@ -20813,7 +20813,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1357
+      name: PassageWay1_1
       rect:
         serializedVersion: 2
         x: 592
@@ -20827,7 +20827,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1358
+      name: PassageWay1_2
       rect:
         serializedVersion: 2
         x: 608
@@ -20841,7 +20841,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1359
+      name: PassageWay1_3
       rect:
         serializedVersion: 2
         x: 624
@@ -20855,7 +20855,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1360
+      name: PassageWay1_4
       rect:
         serializedVersion: 2
         x: 640
@@ -21331,7 +21331,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1394
+      name: PassageWay1_5
       rect:
         serializedVersion: 2
         x: 592
@@ -21345,7 +21345,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1395
+      name: PassageWay1_6
       rect:
         serializedVersion: 2
         x: 608
@@ -21359,7 +21359,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1396
+      name: PassageWay1_7
       rect:
         serializedVersion: 2
         x: 624
@@ -21373,7 +21373,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1397
+      name: PassageWay1_8
       rect:
         serializedVersion: 2
         x: 640
@@ -21849,7 +21849,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1432
+      name: PassageWay1_9
       rect:
         serializedVersion: 2
         x: 592
@@ -21863,7 +21863,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1433
+      name: PassageWay1_10
       rect:
         serializedVersion: 2
         x: 608
@@ -21877,7 +21877,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1434
+      name: PassageWay1_11
       rect:
         serializedVersion: 2
         x: 624
@@ -21891,7 +21891,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1435
+      name: PassageWay1_12
       rect:
         serializedVersion: 2
         x: 640
@@ -22395,7 +22395,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1472
+      name: PassageWay1_13
       rect:
         serializedVersion: 2
         x: 592
@@ -22409,7 +22409,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1473
+      name: PassageWay1_14
       rect:
         serializedVersion: 2
         x: 608
@@ -22423,7 +22423,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1474
+      name: PassageWay1_15
       rect:
         serializedVersion: 2
         x: 624
@@ -22437,7 +22437,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1475
+      name: PassageWay1_16
       rect:
         serializedVersion: 2
         x: 640
@@ -22927,7 +22927,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1511
+      name: PassageWay1_17
       rect:
         serializedVersion: 2
         x: 592
@@ -22941,7 +22941,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1512
+      name: PassageWay1_18
       rect:
         serializedVersion: 2
         x: 608
@@ -22955,7 +22955,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1513
+      name: PassageWay1_19
       rect:
         serializedVersion: 2
         x: 624
@@ -22969,7 +22969,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: General_1514
+      name: PassageWay1_20
       rect:
         serializedVersion: 2
         x: 640
@@ -25931,7 +25931,7 @@ TextureImporter:
         width: 33
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -25945,7 +25945,7 @@ TextureImporter:
         width: 52
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -25959,7 +25959,7 @@ TextureImporter:
         width: 74
         height: 63
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
