@@ -14739,6 +14739,10 @@ Prefab:
       propertyPath: ownedPokemon.Array.data[0].moves.Array.data[0].accuracy
       value: 85
       objectReference: {fileID: 0}
+    - target: {fileID: 1736942768967382, guid: f2887e61a2e6e294aa6271db9a51e332, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114537343772890204, guid: f2887e61a2e6e294aa6271db9a51e332, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f2887e61a2e6e294aa6271db9a51e332, type: 2}
@@ -14968,7 +14972,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 186.20001, y: -77.999985}
+  m_AnchoredPosition: {x: 186.20001, y: -78}
   m_SizeDelta: {x: 103.8, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1141691543
@@ -21708,7 +21712,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 395, y: -83}
+  m_AnchoredPosition: {x: 395.00003, y: -83}
   m_SizeDelta: {x: 250, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1749151082
@@ -21912,7 +21916,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 207.74005, y: -17.429993}
+  m_AnchoredPosition: {x: 207.74008, y: -17.429993}
   m_SizeDelta: {x: 34.49, y: 28.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1766702887
@@ -22763,7 +22767,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 395, y: -41}
+  m_AnchoredPosition: {x: 395.00003, y: -41}
   m_SizeDelta: {x: 250, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1844570580
@@ -33980,7 +33984,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 13.2599945, y: -0.0000039637}
+  m_AnchoredPosition: {x: 13.259996, y: -0.0000039637}
   m_SizeDelta: {x: 26.52, y: 28.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2082376762
