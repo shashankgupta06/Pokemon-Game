@@ -49,8 +49,21 @@ public class BattleManager : MonoBehaviour {
 	[Header("Misc")]
 	public int currentSelection;
 
+	[Header("Health Bars")]
+	public Image opponentHealthBar;
+	public Image playerHealthBar;
+	public Text playerHealth;
 
-	//public Text PokemonName;
+
+	[Header("PP")]
+	public Text PPMax;
+	public Text currentPP;
+
+
+	[Header("BattleUpdate")]
+	public Text battleMessageText;
+	public GameObject battleMessagePanel;
+
 
 
 	void Awake()
@@ -71,10 +84,14 @@ public class BattleManager : MonoBehaviour {
 		moveTT = moveT.text;
 		moveTHT = moveTH.text;
 		moveFT = moveF.text;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+
+
 		if (Input.GetKeyDown (KeyCode.DownArrow))
 		{
 			if (currentSelection < 4){
@@ -94,25 +111,34 @@ public class BattleManager : MonoBehaviour {
 			currentSelection = 1; 
 		}
 
-		if (currentSelection == 1 && Input.GetKeyDown (KeyCode.Return)) 
+		if (currentSelection == 1 && Input.GetKeyDown (KeyCode.Return) && currentMenu == BattleMenu.Selection)     //if fight option is selected
 		{
 			Debug.Log ("FIGHT SELECTED");
 			ChangeMenu (BattleMenu.Fight);
 		}
 
-		if (currentSelection == 4 && Input.GetKeyDown (KeyCode.Return)) 
+		if (currentSelection == 1 && Input.GetKeyDown (KeyCode.Return) && currentMenu == BattleMenu.Fight) 
+		{
+			BattleMove (player.GetComponent<Player> ().ownedPokemon [0].moves [0]);
+
+		}
+
+
+
+		if (currentSelection == 4 && Input.GetKeyDown (KeyCode.Return) && currentMenu == BattleMenu.Selection)              // if run option is selected
 		{
 			Debug.Log ("RUN SELECTED");
-			battleCamera.SetActive (false);
-			mainCamera.SetActive (true);
-			player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
-			Destroy (GameObject.Find ("DefencePodium/emptyPoke(Clone)"));
-			Destroy (GameObject.Find ("AttackPodium/emptyPoke(Clone)"));
+			Run ();
 		}
 
 		if (currentMenu == BattleMenu.Fight && Input.GetKeyDown (KeyCode.Backspace)) 
 		{
 			ChangeMenu (BattleMenu.Selection);
+		}
+
+		if (currentMenu == BattleMenu.BattleInfo && Input.GetKeyDown (KeyCode.Return)) 
+		{
+			ChangeMenu (BattleMenu.Fight);
 		}
 
 
@@ -122,11 +148,12 @@ public class BattleManager : MonoBehaviour {
 			switch (currentSelection) 
 			{
 			case 1:
-				moveO.text = "> " + player.GetComponent<Player>().ownedPokemon[0].moves[0].Name;
-				moveT.text =  moveTT;
-				moveTH.text =  moveTHT;
+				moveO.text = "> " + player.GetComponent<Player> ().ownedPokemon [0].moves [0].Name;
+				moveT.text = moveTT;
+				moveTH.text = moveTHT;
 				moveF.text = moveFT;
-				 break;
+				currentPP.text = player.GetComponent<Player> ().ownedPokemon [0].moves [0].currentPP.ToString();   //displays current PP of move
+				break;
 
 			case 2:
 				moveO.text =  player.GetComponent<Player>().ownedPokemon[0].moves[0].Name;
@@ -151,6 +178,7 @@ public class BattleManager : MonoBehaviour {
 
 			}
 			break;
+
 
 		case BattleMenu.Selection:
 			
@@ -193,6 +221,70 @@ public class BattleManager : MonoBehaviour {
 	}
 
 
+	public void Run()                                                           //run function called when player wants to escape battle/ battle ends!
+	{
+
+		battleCamera.SetActive (false);
+		mainCamera.SetActive (true);
+		player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
+		Destroy (GameObject.Find ("DefencePodium/emptyPoke(Clone)"));
+		Destroy (GameObject.Find ("AttackPodium/emptyPoke(Clone)"));
+
+	}
+
+
+	public void BattleMove (PokemonMoves moveSelected)                       // the move selected gets processed and action occurs
+	{
+
+		playerHealth.text = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.HP + "/" +player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.maxHP;
+
+		int damage = 0;
+		int opponentMaxHp = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon> ().maxHP;
+		int level = player.GetComponent<Player> ().ownedPokemon [0].level;
+		float power = moveSelected.power;
+		int attackStat = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.pokemonStats.attackStat;
+		int defenceStat = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon>().pokemonStats.defenceStat;
+
+	
+		damage =Mathf.FloorToInt(((((((2 * level) / 5) + 2) * power * ((float)attackStat / defenceStat)) / 50) + 2) * 1);
+
+		//Debug.Log (damage);
+
+		GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon> ().HP -= damage;   //reduces opponent damage
+
+		float percentDamage = (((float)damage / opponentMaxHp)*100);
+
+		float opponentBarValue = -opponentHealthBar.GetComponent<RectTransform> ().offsetMax.x;    //offest sets value to negative!!
+		//Debug.Log (opponentBarValue);
+
+		float newValue =(((((100 + percentDamage) / 100) * (203) )-203)+ opponentBarValue);      
+
+
+
+		opponentHealthBar.GetComponent<RectTransform> ().offsetMax = new Vector2 (-newValue , opponentHealthBar.GetComponent<RectTransform> ().offsetMax.y);
+
+		player.GetComponent<Player> ().ownedPokemon [0].moves [0].currentPP = player.GetComponent<Player> ().ownedPokemon [0].moves [0].currentPP - 1;
+
+		currentPP.text = player.GetComponent<Player> ().ownedPokemon [0].moves [0].currentPP.ToString();
+
+
+
+		battleMessageText.text = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.PName + " used " + moveSelected.Name;
+		StartCoroutine (Wait (0.01f));
+
+
+
+
+		//Debug.Log (opponentHealthBar.GetComponent<RectTransform> ().offsetMax.x);
+	}
+
+	IEnumerator Wait(float time)
+	{
+		yield return new  WaitForSeconds(time);
+		ChangeMenu (BattleMenu.BattleInfo);
+	}
+
+
 	public void ChangeMenu(BattleMenu m)
 	{	
 		currentMenu = m;
@@ -213,6 +305,7 @@ public class BattleManager : MonoBehaviour {
 			movesMenu.gameObject.SetActive (true);
 			movesDetails.gameObject.SetActive (true);
 			InfoMenu.gameObject.SetActive (false);
+			battleMessagePanel.SetActive (false);
 			break;
 
 		case BattleMenu.Info: 
@@ -221,6 +314,11 @@ public class BattleManager : MonoBehaviour {
 			movesMenu.gameObject.SetActive (false);
 			movesDetails.gameObject.SetActive (false);
 			InfoMenu.gameObject.SetActive (true);
+			break;
+
+		case BattleMenu.BattleInfo:
+			movesMenu.SetActive (false);
+			battleMessagePanel.SetActive (true);
 			break;
 
 		/*case BattleMenu.Selection: 
@@ -241,7 +339,8 @@ public class BattleManager : MonoBehaviour {
 		Pokemon,
 		Bag,
 		Fight,
-		Info
+		Info,
+		BattleInfo
 
 
 	}

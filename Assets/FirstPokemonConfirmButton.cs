@@ -49,10 +49,11 @@ public class FirstPokemonConfirmButton : MonoBehaviour {
 		moves.accuracy = 95;
 		moves.PP = 35;
 		moves.power = 35;
+		moves.currentPP = 35;
 
 		ownedPokemon.NickName = pokemonName;
 		ownedPokemon.ownedPokemon = GameObject.FindGameObjectWithTag ("pokemon").GetComponent<BasePokemon> ();
-		ownedPokemon.level = 1;
+		ownedPokemon.level = GameObject.FindGameObjectWithTag ("pokemon").GetComponent<BasePokemon> ().level;
 		ownedPokemon.moves.Add (moves);
 
 

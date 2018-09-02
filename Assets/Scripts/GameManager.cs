@@ -15,14 +15,20 @@ public class GameManager : MonoBehaviour {
 	public Transform defencePodium;
 	public Transform attackPodium;
 	public GameObject emptyPoke;
+	public Image opponentHealthbar;
+
 
 	public BattleManager bm;
 
 	public Text type;
 	public Text PP;
 	public Text pokemonName;
-	public Text levelText;
+	public Text levelTextOppenent;
+	public Text levelTextPlayer;
 	public Text updateText;
+	public Text OpponentPokemonName;
+
+
 
 	public Sprite southSprite;
 
@@ -30,6 +36,8 @@ public class GameManager : MonoBehaviour {
 
 	public GameObject player;
 	public GameObject playerCamera;
+
+
 
 	void Awake()
 	{
@@ -41,7 +49,7 @@ public class GameManager : MonoBehaviour {
 		switch (LastScene) 
 		{
 		case "PlayerHouseBottom":
-			player.transform.position = new Vector2 (-10.5f, -22.5f);
+			player.transform.position = new Vector2 (-9.5f, -22.5f);
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
 			break;
 
@@ -79,7 +87,7 @@ public class GameManager : MonoBehaviour {
 		switch (LastScene) {
 		case "PlayerHouseBottom":
 			yield return new WaitForSeconds (n);
-			player.transform.position = new Vector3 (-10.5f, -22.5f, 0);
+			player.transform.position = new Vector3 (-9.5f, -22.5f, 0);
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
 			break;
 
@@ -156,7 +164,12 @@ public class GameManager : MonoBehaviour {
 		type.text = player.GetComponent<Player> ().ownedPokemon [0].moves [0].Category.ToString ();
 		PP.text = player.GetComponent<Player> ().ownedPokemon [0].moves [0].PP.ToString();          //eventually move this all to BattleManager?
 		pokemonName.text = player.GetComponent<Player>().ownedPokemon[0].NickName;
-		levelText.text = player.GetComponent<Player> ().ownedPokemon [0].level.ToString();
+		levelTextPlayer.text = player.GetComponent<Player> ().ownedPokemon [0].level.ToString();
+
+		levelTextOppenent.text = GameObject.Find ("DefencePodium/emptyPoke(Clone)").GetComponent<BasePokemon>().level.ToString();
+		OpponentPokemonName.text = GameObject.Find ("DefencePodium/emptyPoke(Clone)").GetComponent<BasePokemon> ().PName;
+
+		opponentHealthbar.GetComponent<RectTransform> ().offsetMax = new Vector2 (-13, opponentHealthbar.GetComponent<RectTransform> ().offsetMax.y);
 
 		bm.ChangeMenu (BattleManager.BattleMenu.Selection);
 	}
@@ -192,6 +205,7 @@ public class PokemonMoves
 	public MoveType Category;
 	public Stat moveStat;
 	public PokemonType moveType;
+	public int currentPP;
 	public int PP;
 	public float power;
 	public float accuracy;

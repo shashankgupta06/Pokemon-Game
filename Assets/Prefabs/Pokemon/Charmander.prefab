@@ -76,7 +76,7 @@ MonoBehaviour:
   evolveTo:
     nextEvolution: {fileID: 0}
     levelUpLevel: 0
-  level: 1
+  level: 5
 --- !u!212 &212413313666014912
 SpriteRenderer:
   m_ObjectHideFlags: 1

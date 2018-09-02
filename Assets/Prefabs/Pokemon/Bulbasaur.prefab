@@ -58,6 +58,7 @@ MonoBehaviour:
   type: 6
   rarity: 1
   HP: 45
+  maxHP: 0
   attackStat:
     minimum: 47
     maximum: 51
@@ -72,12 +73,12 @@ MonoBehaviour:
     spAttackStat: 65
     spDefenceStat: 65
     evasionStat: 0
-  canEvolve: 1
+  canEvolve: 0
   evolveTo:
     nextEvolution: {fileID: 114684674572339392, guid: b967c0f335927844e91f8f9abd12a8e7,
       type: 2}
     levelUpLevel: 0
-  level: 0
+  level: 5
 --- !u!212 &212325351534728204
 SpriteRenderer:
   m_ObjectHideFlags: 1
