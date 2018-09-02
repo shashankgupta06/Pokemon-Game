@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class BgSoundScript : MonoBehaviour {
 
+	public AudioClip townClip;
+	public AudioClip routeClip;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -36,12 +39,13 @@ public class BgSoundScript : MonoBehaviour {
 	//play global end
 	
 	// Update is called once per frame
-	void Update () {
+	void OnLevelWasLoaded () {
 
 		if (SceneManager.GetActiveScene().name == "PlayerHouseTop") 
 		{
-			Destroy (this.gameObject);
+			gameObject.GetComponent<AudioSource> ().clip = townClip;
+			gameObject.GetComponent<AudioSource> ().Play ();
 		}
-		
+			
 	}
 }

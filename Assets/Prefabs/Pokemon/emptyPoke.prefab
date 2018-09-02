@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212535590152931624}
   m_Layer: 0
   m_Name: emptyPoke
-  m_TagString: Untagged
+  m_TagString: pokemon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

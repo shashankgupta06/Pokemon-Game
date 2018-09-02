@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114684674572339392}
   m_Layer: 0
   m_Name: Venasaur
-  m_TagString: Untagged
+  m_TagString: pokemon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,6 +76,7 @@ MonoBehaviour:
   evolveTo:
     nextEvolution: {fileID: 0}
     levelUpLevel: 0
+  level: 0
 --- !u!212 &212371953515991960
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -6,13 +6,51 @@ using UnityEngine.SceneManagement;
 public class FirstPokemon : MonoBehaviour
 {
 
-	public GameObject player;
+	private GameObject player;
 	private string pokeball;
+
+	public GameObject pokeBall1, pokeBall2, pokeBall3;
 
 	void OnTriggerEnter2D(Collider2D c){
 		pokeball = gameObject.name;
 
 	}
+
+
+	void Awake()
+	{
+		player = GameObject.FindGameObjectWithTag ("Player");
+	}
+
+
+	void OnLevelWasLoaded()
+	{
+
+		if (player.GetComponent<Player> ().ownedPokemon.Count != 0) {
+
+			switch (PlayerPrefs.GetString ("ChosenPokemon")) {
+
+			case "Squirtle":
+				pokeBall1.SetActive (false);
+				break;
+
+			case "Charmander":
+				pokeBall3.SetActive (false);
+				break;
+
+			case "Bulbasaur":
+				pokeBall2.SetActive (false);
+				break;
+
+			default:
+				break;
+
+			}
+
+
+		}
+	}
+
 
 	void Update()
 	{
@@ -21,6 +59,8 @@ public class FirstPokemon : MonoBehaviour
 		if (player.GetComponent<BoxCollider2D> ().IsTouching (gameObject.GetComponent<BoxCollider2D> ()) && (player.GetComponent<SpriteRenderer>().sprite.name == "North_1" || player.GetComponent<SpriteRenderer>().sprite.name == "North_2") ) {
 			if(Input.GetKeyDown(KeyCode.Return)){
 				switch (pokeball) {
+
+
 
 				case  "pokeball":
 					Debug.Log ("Squirtle");

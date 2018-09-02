@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114311544968900612}
   m_Layer: 0
   m_Name: Charmander
-  m_TagString: Untagged
+  m_TagString: pokemon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PName: Charmander
-  image: {fileID: 21300006, guid: 7fd81ad725659d143aa4569c40a6d820, type: 3}
+  image: {fileID: 21300006, guid: 1d010079b572de04c91fd23d7c457ffd, type: 3}
   biomeFound: 0
   type: 4
   rarity: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
   evolveTo:
     nextEvolution: {fileID: 0}
     levelUpLevel: 0
-  level: 1
+  level: 5
 --- !u!212 &212413313666014912
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -111,7 +111,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300006, guid: 7fd81ad725659d143aa4569c40a6d820, type: 3}
+  m_Sprite: {fileID: 21300006, guid: 1d010079b572de04c91fd23d7c457ffd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

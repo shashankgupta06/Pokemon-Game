@@ -1115,7 +1115,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1127,7 +1127,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1139,7 +1139,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!224 &2034254805
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1169,6 +1169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a358533d947c4c145842484b940dbb6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  townClip: {fileID: 8300000, guid: 13ab697f0f7fe9347b22d8bb5f42d684, type: 3}
+  routeClip: {fileID: 8300000, guid: 4e0975ea5769cca479f866c832ff2d0d, type: 3}
 --- !u!1 &2084516589
 GameObject:
   m_ObjectHideFlags: 0

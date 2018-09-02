@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114150910629899468}
   m_Layer: 0
   m_Name: Pikachu
-  m_TagString: Untagged
+  m_TagString: pokemon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,6 +76,7 @@ MonoBehaviour:
   evolveTo:
     nextEvolution: {fileID: 0}
     levelUpLevel: 0
+  level: 0
 --- !u!212 &212391374987523764
 SpriteRenderer:
   m_ObjectHideFlags: 1

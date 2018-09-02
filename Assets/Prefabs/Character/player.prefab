@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 114646866560945398}
   - component: {fileID: 50215657595574844}
   - component: {fileID: 61230485643014008}
+  - component: {fileID: 114537343772890204}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -339,6 +340,17 @@ MonoBehaviour:
   westWalk1: {fileID: 21300088, guid: 2f3b174d83018d04885316e8867622f7, type: 3}
   westWalk2: {fileID: 21300090, guid: 2f3b174d83018d04885316e8867622f7, type: 3}
   walkSpeed: 3
+--- !u!114 &114537343772890204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1736942768967382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54cc1a344076f764b8e1aa2d4cb9a512, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114575607346040964
 MonoBehaviour:
   m_ObjectHideFlags: 1
