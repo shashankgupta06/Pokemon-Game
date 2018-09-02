@@ -2,18 +2,9 @@
 Making an old-school pokemon game using unity and C#
 
 
-Completed:                                          
-
-Main Menu
-Pallet town and town interaction completed
-professor oak sprite added
-Professor Oak Functionality
-
-
-Features to Work on Immediately:
- 
-fix battle system
-bug fixing
-add more pokemon to the collection
+features to add:
+Fix battle system completely;
+add more sounds e.g. oak lab sound, select sound etc
+expand map;
  
 
