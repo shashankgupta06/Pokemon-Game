@@ -37,6 +37,9 @@ public class GameManager : MonoBehaviour {
 	public GameObject player;
 	public GameObject playerCamera;
 
+	[Header("Audio")]
+	public AudioClip battleMusic;
+
 
 
 	void Awake()
@@ -131,6 +134,8 @@ public class GameManager : MonoBehaviour {
 		playerCamera.SetActive (false);
 		battleCamera.SetActive (true);
 
+		PlayMusic (battleMusic);
+
 		BasePokemon battlePokemon = GetRandomPokemonFromList (GetPokemonByRarity (rarity));
 
 		player.GetComponent<PlayerMovement> ().isAllowedToMove = false;
@@ -193,6 +198,12 @@ public class GameManager : MonoBehaviour {
 		poke = pokeList [pokeIndex];
 		return poke;
 
+	}
+
+	void PlayMusic(AudioClip name)
+	{
+		GameObject.Find ("BgAudio").GetComponent<AudioSource> ().clip = name;
+		GameObject.Find ("BgAudio").GetComponent<AudioSource> ().Play ();
 	}
 }
 

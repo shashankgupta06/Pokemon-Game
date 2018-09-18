@@ -64,6 +64,8 @@ public class BattleManager : MonoBehaviour {
 	public Text battleMessageText;
 	public GameObject battleMessagePanel;
 
+	[Header("Audio")]
+	public AudioClip routeMusic;
 
 
 	void Awake()
@@ -229,7 +231,16 @@ public class BattleManager : MonoBehaviour {
 		player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
 		Destroy (GameObject.Find ("DefencePodium/emptyPoke(Clone)"));
 		Destroy (GameObject.Find ("AttackPodium/emptyPoke(Clone)"));
+		PlayMusic (routeMusic);
 
+
+	}
+
+
+	void PlayMusic(AudioClip name)
+	{
+		GameObject.Find ("BgAudio").GetComponent<AudioSource> ().clip = name;
+		GameObject.Find ("BgAudio").GetComponent<AudioSource> ().Play ();
 	}
 
 

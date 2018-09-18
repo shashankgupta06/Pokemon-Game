@@ -4078,7 +4078,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 246.00003, y: -148.29999}
+  m_AnchoredPosition: {x: 246.00002, y: -148.29999}
   m_SizeDelta: {x: -541.9, y: -499.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &337059148
@@ -15396,6 +15396,7 @@ MonoBehaviour:
   southSprite: {fileID: 21300040, guid: 2f3b174d83018d04885316e8867622f7, type: 3}
   player: {fileID: 0}
   playerCamera: {fileID: 0}
+  battleMusic: {fileID: 8300000, guid: a14c45da8d5a248479af34121a8aace5, type: 3}
 --- !u!4 &1175167206
 Transform:
   m_ObjectHideFlags: 0
@@ -15741,6 +15742,7 @@ MonoBehaviour:
   currentPP: {fileID: 555166443}
   battleMessageText: {fileID: 82077105}
   battleMessagePanel: {fileID: 84539860}
+  routeMusic: {fileID: 8300000, guid: 4e0975ea5769cca479f866c832ff2d0d, type: 3}
 --- !u!4 &1209959871
 Transform:
   m_ObjectHideFlags: 0
@@ -22826,7 +22828,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -200, y: -245}
+  m_AnchoredPosition: {x: -199.99998, y: -245}
   m_SizeDelta: {x: -400, y: -490}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1840890776
