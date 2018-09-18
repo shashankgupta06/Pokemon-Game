@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class CarpetCollider : MonoBehaviour {
 
 	public GameObject player;
+	public AudioClip gameAudio;
 
 
 	void Awake()
@@ -19,10 +20,30 @@ public class CarpetCollider : MonoBehaviour {
 			PlayerPrefs.SetString ("LastScene", currentScene);
 			PlayerPrefs.Save ();
 
+			switch (currentScene) {
+			case "PlayerHouseBottom":
+				break;
 
+			case "GarysHouse":
+				break;
+
+			case "OakLab":
+				PlayMusic (gameAudio);
+				break;
+
+			default:
+				break;
+
+			}
 			SceneManager.LoadScene ("MainGame");
 		}
 
+	}
+
+	void PlayMusic (AudioClip name)
+	{
+		GameObject.Find ("BgAudio").GetComponent<AudioSource> ().clip = name;
+		GameObject.Find ("BgAudio").GetComponent<AudioSource> ().Play ();
 	}
 	
 }
