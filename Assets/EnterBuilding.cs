@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class EnterBuilding : MonoBehaviour {
 
 	private GameObject player;
+	public AudioClip OakLabMusic;
 
 
 	void Awake()
@@ -29,6 +30,7 @@ public class EnterBuilding : MonoBehaviour {
 
 			case "OakLabDoor": 
 				SceneManager.LoadScene ("OakLab");
+				PlayMusic (OakLabMusic);
 				break;
 
 			case "PlayerHouseDoor":
@@ -51,6 +53,12 @@ public class EnterBuilding : MonoBehaviour {
 		}
 
 
+	}
+
+	void PlayMusic(AudioClip name)
+	{
+		GameObject.Find ("BgAudio").GetComponent<AudioSource> ().clip = name;
+		GameObject.Find ("BgAudio").GetComponent<AudioSource> ().PlayDelayed (0.4f);
 	}
 
 

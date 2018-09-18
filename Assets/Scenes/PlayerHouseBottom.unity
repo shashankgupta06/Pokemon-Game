@@ -1098,6 +1098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 641652754}
+  gameAudio: {fileID: 8300000, guid: 13ab697f0f7fe9347b22d8bb5f42d684, type: 3}
 --- !u!61 &188158527
 BoxCollider2D:
   m_ObjectHideFlags: 0
