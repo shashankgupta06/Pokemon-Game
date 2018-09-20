@@ -15059,7 +15059,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 198, y: -75.600006}
+  m_AnchoredPosition: {x: 198, y: -75.6}
   m_SizeDelta: {x: 80.3, y: 23.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1141691543
@@ -15378,8 +15378,10 @@ MonoBehaviour:
   - {fileID: 114392567599921168, guid: 52bbba8efe2a96d40b7fb548c65396cc, type: 2}
   - {fileID: 114311544968900612, guid: 1e3924901e2fba74d95344bc509c224f, type: 2}
   - {fileID: 114578244194519888, guid: ea4de0c21b377c348874ca5fb206945f, type: 2}
-  - {fileID: 114578244194519888, guid: ea4de0c21b377c348874ca5fb206945f, type: 2}
-  - {fileID: 114578244194519888, guid: ea4de0c21b377c348874ca5fb206945f, type: 2}
+  - {fileID: 114150910629899468, guid: 5bafd90d15c806344a3bf7ba8dcfc7d2, type: 2}
+  - {fileID: 114684674572339392, guid: b967c0f335927844e91f8f9abd12a8e7, type: 2}
+  - {fileID: 114624683564968458, guid: 536f4a89eea0eb747a9c5c5caad1b32c, type: 2}
+  - {fileID: 114185570424087658, guid: 47877a30c7afbc6429bc75fb88ab3d79, type: 2}
   allMoves:
   - Name: Tackle
     Category: 0
@@ -22100,7 +22102,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 207.74008, y: -17.429989}
+  m_AnchoredPosition: {x: 207.74008, y: -17.429993}
   m_SizeDelta: {x: 34.49, y: 28.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1766702887

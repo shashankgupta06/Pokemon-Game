@@ -56,7 +56,7 @@ MonoBehaviour:
   image: {fileID: 21300024, guid: 7fd81ad725659d143aa4569c40a6d820, type: 3}
   biomeFound: 0
   type: 8
-  rarity: 0
+  rarity: 4
   HP: 100
   maxHP: 0
   attackStat:

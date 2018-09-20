@@ -170,7 +170,7 @@ public class GameManager : MonoBehaviour {
 
 
 
-		int WildPokemonLevel = Random.Range (2, 3);       //here we try to set a random level for our pokemon!
+		int WildPokemonLevel = Random.Range (2, 4);       //here we try to set a random level for our pokemon!    not maximally inclusive hence 4!!!!
 		GameObject.Find ("DefencePodium/emptyPoke(Clone)").GetComponent<BasePokemon>().level = WildPokemonLevel;   // Here we try to set it in the script
 		levelTextOppenent.text = GameObject.Find ("DefencePodium/emptyPoke(Clone)").GetComponent<BasePokemon>().level.ToString();
 		OpponentPokemonName.text = GameObject.Find ("DefencePodium/emptyPoke(Clone)").GetComponent<BasePokemon> ().PName;
@@ -195,7 +195,7 @@ public class GameManager : MonoBehaviour {
 	public BasePokemon GetRandomPokemonFromList (List<BasePokemon> pokeList)
 	{
 		BasePokemon poke = new BasePokemon ();
-		int pokeIndex = Random.Range (0, pokeList.Count - 1);
+		int pokeIndex = Random.Range (0, pokeList.Count);        // it was originally (0,pokeList.Count - 1)
 		poke = pokeList [pokeIndex];
 		return poke;
 

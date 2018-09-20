@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LongGrass : MonoBehaviour {
+public class LongGrass : MonoBehaviour
+{
 
 	public BiomeList grassType;
 
@@ -10,19 +11,20 @@ public class LongGrass : MonoBehaviour {
 	private GameManager gm;
 
 	// Use this for initialization
-	void Start () {
-		gm = GameObject.FindGameObjectWithTag ("GameManager").GetComponent<GameManager>();
+	void Start ()
+	{
+		gm = GameObject.FindGameObjectWithTag ("GameManager").GetComponent<GameManager> ();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 		
 	}
 
-	void OnTriggerEnter2D(Collider2D col)
+	void OnTriggerEnter2D (Collider2D col)
 	{
-		if (col.GetComponent<PlayerMovement> ()) 
-		{
+		if (col.GetComponent<PlayerMovement> ()) {
 			//P = x / 187.5
 			//VC=10, C=8.5, S-R= 6.75, Rare= 3.33, VR= 1.25
 
@@ -37,31 +39,36 @@ public class LongGrass : MonoBehaviour {
 
 			if (p < vr * 100) {
 
-				if (gm != null) 
+				if (gm != null) {
 					gm.EnterBattle (Rarity.VeryRare);
+				}
 
 			} else if (p < r * 100) {
 
-				if (gm != null) 
+				if (gm != null) {
 					gm.EnterBattle (Rarity.Rare);
+				}
 
 
 			} else if (p < sr * 100) {
 
-				if (gm != null) 
+				if (gm != null) {
 					gm.EnterBattle (Rarity.SemiRare);
+				}
 
 			} else if (p < c * 100) {
 
-				if (gm != null) 
+				if (gm != null) {
 					gm.EnterBattle (Rarity.Common);
+				}
 
 			} else if (p < vc * 100) {
 				
-				if (gm != null) 
+				if (gm != null) {
 					gm.EnterBattle (Rarity.veryCommon);
+				}
 
-			}
+			} 
 
 
 		}
