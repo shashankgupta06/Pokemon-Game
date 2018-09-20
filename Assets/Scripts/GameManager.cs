@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour {
 	public GameObject emptyPoke;
 	public Image opponentHealthbar;
 
-
 	public BattleManager bm;
 
 	public Text type;
@@ -27,8 +26,6 @@ public class GameManager : MonoBehaviour {
 	public Text levelTextPlayer;
 	public Text updateText;
 	public Text OpponentPokemonName;
-
-
 
 	public Sprite southSprite;
 
@@ -81,7 +78,6 @@ public class GameManager : MonoBehaviour {
 	{
 		StartCoroutine (Wait (0.3f));
 		Debug.Log (LastScene);
-
 	}
 
 	IEnumerator Wait(float n)
@@ -144,6 +140,7 @@ public class GameManager : MonoBehaviour {
 		//player.GetComponent<PlayerMovement>().isAllowedToMove = false;
 
 		GameObject dPoke = Instantiate (emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
+		dPoke.AddComponent<WildPokemonMoves> ();             //add WildPokemonMoves script that will automatically add moves to the the wild pokemon
 
 		Vector3 pokeLocalPos = new Vector3 (0, 1, 0);
 
@@ -171,6 +168,10 @@ public class GameManager : MonoBehaviour {
 		pokemonName.text = player.GetComponent<Player>().ownedPokemon[0].NickName;
 		levelTextPlayer.text = player.GetComponent<Player> ().ownedPokemon [0].level.ToString();
 
+
+
+		int WildPokemonLevel = Random.Range (2, 3);       //here we try to set a random level for our pokemon!
+		GameObject.Find ("DefencePodium/emptyPoke(Clone)").GetComponent<BasePokemon>().level = WildPokemonLevel;   // Here we try to set it in the script
 		levelTextOppenent.text = GameObject.Find ("DefencePodium/emptyPoke(Clone)").GetComponent<BasePokemon>().level.ToString();
 		OpponentPokemonName.text = GameObject.Find ("DefencePodium/emptyPoke(Clone)").GetComponent<BasePokemon> ().PName;
 

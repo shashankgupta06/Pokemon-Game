@@ -907,7 +907,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -96.652, y: -249.26001}
+  m_AnchoredPosition: {x: -96.65201, y: -249.26001}
   m_SizeDelta: {x: -195.29, y: -490.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &84539862
@@ -7101,7 +7101,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -96.322, y: -249}
+  m_AnchoredPosition: {x: -96.32199, y: -249}
   m_SizeDelta: {x: -194.64, y: -498}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &644729756
@@ -15380,7 +15380,17 @@ MonoBehaviour:
   - {fileID: 114578244194519888, guid: ea4de0c21b377c348874ca5fb206945f, type: 2}
   - {fileID: 114578244194519888, guid: ea4de0c21b377c348874ca5fb206945f, type: 2}
   - {fileID: 114578244194519888, guid: ea4de0c21b377c348874ca5fb206945f, type: 2}
-  allMoves: []
+  allMoves:
+  - Name: Tackle
+    Category: 0
+    moveStat:
+      minimum: 30
+      maximum: 40
+    moveType: 13
+    currentPP: 35
+    PP: 35
+    power: 35
+    accuracy: 95
   defencePodium: {fileID: 1878019319}
   attackPodium: {fileID: 1291228046}
   emptyPoke: {fileID: 1409379992076438, guid: c82afad0199fa5643811260f29c1972a, type: 2}
@@ -18916,7 +18926,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 198.99998, y: -57}
+  m_AnchoredPosition: {x: 198.99998, y: -56.999992}
   m_SizeDelta: {x: 357, y: 83.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1448340662
@@ -22090,7 +22100,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 207.74008, y: -17.429993}
+  m_AnchoredPosition: {x: 207.74008, y: -17.429989}
   m_SizeDelta: {x: 34.49, y: 28.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1766702887
@@ -22828,7 +22838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -199.99998, y: -245}
+  m_AnchoredPosition: {x: -200, y: -245}
   m_SizeDelta: {x: -400, y: -490}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1840890776

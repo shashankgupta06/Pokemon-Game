@@ -58,6 +58,7 @@ MonoBehaviour:
   type: 5
   rarity: 3
   HP: 44
+  maxHP: 0
   attackStat:
     minimum: 47
     maximum: 49

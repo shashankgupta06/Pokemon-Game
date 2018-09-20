@@ -58,6 +58,7 @@ MonoBehaviour:
   type: 8
   rarity: 0
   HP: 100
+  maxHP: 0
   attackStat:
     minimum: 10
     maximum: 30
@@ -76,7 +77,7 @@ MonoBehaviour:
   evolveTo:
     nextEvolution: {fileID: 0}
     levelUpLevel: 0
-  level: 0
+  level: 5
 --- !u!212 &212391374987523764
 SpriteRenderer:
   m_ObjectHideFlags: 1

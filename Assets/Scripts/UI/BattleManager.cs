@@ -249,21 +249,26 @@ public class BattleManager : MonoBehaviour {
 
 		playerHealth.text = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.HP + "/" +player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.maxHP;
 
-		int damage = 0;
-		int opponentMaxHp = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon> ().maxHP;
-		int level = player.GetComponent<Player> ().ownedPokemon [0].level;
+		int damageAttackPokemon = 0;
+
+		int defencePokemonMaxHp = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon> ().maxHP;
+
+		int attackPokemonLevel = player.GetComponent<Player> ().ownedPokemon [0].level;
+
+
 		float power = moveSelected.power;
-		int attackStat = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.pokemonStats.attackStat;
-		int defenceStat = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon>().pokemonStats.defenceStat;
+		int attackStatAttackPokemon = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.pokemonStats.attackStat;
+		int defenceStatDefencePokemon = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon>().pokemonStats.defenceStat;
 
 	
-		damage =Mathf.FloorToInt(((((((2 * level) / 5) + 2) * power * ((float)attackStat / defenceStat)) / 50) + 2) * 1);
+		damageAttackPokemon =Mathf.FloorToInt(((((((2 * attackPokemonLevel) / 5) + 2) * power * ((float)attackStatAttackPokemon / defenceStatDefencePokemon)) / 50) + 2) * 1);
+
 
 		//Debug.Log (damage);
 
-		GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon> ().HP -= damage;   //reduces opponent damage
+		GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon> ().HP -= damageAttackPokemon;   //reduces opponent damage
 
-		float percentDamage = (((float)damage / opponentMaxHp)*100);
+		float percentDamage = (((float)damageAttackPokemon / defencePokemonMaxHp)*100);
 
 		float opponentBarValue = -opponentHealthBar.GetComponent<RectTransform> ().offsetMax.x;    //offest sets value to negative!!
 		//Debug.Log (opponentBarValue);
@@ -284,7 +289,11 @@ public class BattleManager : MonoBehaviour {
 		StartCoroutine (Wait (0.01f));
 
 
-
+		int damageDefencePokemon = 0;
+		int defencePokemonLevel = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon> ().level;
+		int attackPokemonHP = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.HP;
+		//string moveName = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<WildPokemonMoves> ().wildPokemonMoves[0].moves [0].Name;
+		//Debug.Log (moveName + "   pop   ");
 
 		//Debug.Log (opponentHealthBar.GetComponent<RectTransform> ().offsetMax.x);
 	}
