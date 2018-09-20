@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212371953515991960}
   - component: {fileID: 114684674572339392}
   m_Layer: 0
-  m_Name: Venasaur
+  m_Name: IvySaur
   m_TagString: pokemon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,12 +52,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f49dd8ba8df69a4fa6c55f31ea2f6bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PName: Venasaur
+  PName: IvySaur
   image: {fileID: 21300002, guid: 7fd81ad725659d143aa4569c40a6d820, type: 3}
   biomeFound: 0
   type: 6
   rarity: 2
   HP: 0
+  maxHP: 0
   attackStat:
     minimum: 0
     maximum: 0
@@ -111,7 +112,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: 7fd81ad725659d143aa4569c40a6d820, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 1d010079b572de04c91fd23d7c457ffd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

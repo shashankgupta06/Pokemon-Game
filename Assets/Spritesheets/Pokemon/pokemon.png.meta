@@ -5,8 +5,8 @@ licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Bulbasaur
-    21300002: Venasaur
-    21300004: pokemon_3
+    21300002: IvySaur
+    21300004: Venasaur
     21300006: Charmander
     21300008: Charmeleon
     21300010: Charizard
@@ -849,10 +849,10 @@ TextureImporter:
       name: Bulbasaur
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1381
-        width: 79
-        height: 59
+        x: 16
+        y: 1380
+        width: 50
+        height: 41
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 1, z: 0, w: 0}
@@ -860,13 +860,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Venasaur
+      name: IvySaur
       rect:
         serializedVersion: 2
-        x: 66
+        x: 93
         y: 1378
-        width: 96
-        height: 62
+        width: 57
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -874,13 +874,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: pokemon_3
+      name: Venasaur
       rect:
         serializedVersion: 2
-        x: 155
-        y: 1362
-        width: 83
-        height: 78
+        x: 160
+        y: 1365
+        width: 79
+        height: 70
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -891,10 +891,10 @@ TextureImporter:
       name: Charmander
       rect:
         serializedVersion: 2
-        x: 229
+        x: 258
         y: 1377
-        width: 96
-        height: 63
+        width: 43
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -905,10 +905,10 @@ TextureImporter:
       name: Charmeleon
       rect:
         serializedVersion: 2
-        x: 306
+        x: 331
         y: 1374
-        width: 96
-        height: 66
+        width: 60
+        height: 55
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -933,10 +933,10 @@ TextureImporter:
       name: Squirtle
       rect:
         serializedVersion: 2
-        x: 474
+        x: 497
         y: 1378
-        width: 96
-        height: 62
+        width: 49
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -962,9 +962,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 640
-        y: 1365
+        y: 1368
         width: 80
-        height: 75
+        height: 67
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -975,10 +975,10 @@ TextureImporter:
       name: Caterpie
       rect:
         serializedVersion: 2
-        x: 725
-        y: 1367
-        width: 64
-        height: 64
+        x: 739
+        y: 1381
+        width: 40
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -989,10 +989,10 @@ TextureImporter:
       name: metapod
       rect:
         serializedVersion: 2
-        x: 806
-        y: 1371
-        width: 62
-        height: 55
+        x: 815
+        y: 1381
+        width: 51
+        height: 39
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
