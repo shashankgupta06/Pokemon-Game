@@ -28,7 +28,7 @@ public class CarpetCollider : MonoBehaviour {
 				break;
 
 			case "OakLab":
-				//PlayMusic (gameAudio);      //uncomment to change audio as scene shifts from oakLab to MainGame
+				PlayMusic (gameAudio);      //uncomment to change audio as scene shifts from oakLab to MainGame
 				break;
 
 			default:
