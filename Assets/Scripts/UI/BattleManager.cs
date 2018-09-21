@@ -8,6 +8,8 @@ public class BattleManager : MonoBehaviour {
 	public BattleMenu currentMenu;
 	public GameObject player;
 
+	private bool DefencePokemonAttacked;
+
 
 	[Header("Cameras")]
 	public GameObject battleCamera;
@@ -86,11 +88,33 @@ public class BattleManager : MonoBehaviour {
 		moveTT = moveT.text;
 		moveTHT = moveTH.text;
 		moveFT = moveF.text;
+	}
 
+	void OnLevelWasLoaded()
+	{
+		DefencePokemonAttacked = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+
+		playerHealth.text = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.HP + "/" + player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.maxHP;
+
+		if (-playerHealthBar.GetComponent<RectTransform> ().offsetMax.x >= 145) {
+			playerHealthBar.color = Color.red;
+		} else if (-playerHealthBar.GetComponent<RectTransform> ().offsetMax.x >= 73) {
+			playerHealthBar.color = Color.yellow;
+		}
+
+
+		if (-opponentHealthBar.GetComponent<RectTransform> ().offsetMax.x >= 145) {
+			opponentHealthBar.color = Color.red;
+		} else if (-opponentHealthBar.GetComponent<RectTransform> ().offsetMax.x >= 73) {
+			opponentHealthBar.color = Color.yellow;
+		}
+
+
 
 
 
@@ -115,13 +139,12 @@ public class BattleManager : MonoBehaviour {
 
 		if (currentSelection == 1 && Input.GetKeyDown (KeyCode.Return) && currentMenu == BattleMenu.Selection)     //if fight option is selected
 		{
-			Debug.Log ("FIGHT SELECTED");
 			ChangeMenu (BattleMenu.Fight);
 		}
 
 		if (currentSelection == 1 && Input.GetKeyDown (KeyCode.Return) && currentMenu == BattleMenu.Fight) 
 		{
-			BattleMove (player.GetComponent<Player> ().ownedPokemon [0].moves [0]);
+			BattleMove (player.GetComponent<Player> ().ownedPokemon [0].moves [0], "AttackPokemon");
 
 		}
 
@@ -140,7 +163,12 @@ public class BattleManager : MonoBehaviour {
 
 		if (currentMenu == BattleMenu.BattleInfo && Input.GetKeyDown (KeyCode.Return)) 
 		{
-			ChangeMenu (BattleMenu.Fight);
+			if (DefencePokemonAttacked == false) {
+				BattleMove (GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<WildPokemonMoves> ().wildMoves.moves [0], "DefencePokemon");
+				DefencePokemonAttacked = true;
+			} else {
+				ChangeMenu (BattleMenu.Fight);
+			}
 		}
 
 
@@ -244,59 +272,63 @@ public class BattleManager : MonoBehaviour {
 	}
 
 
-	public void BattleMove (PokemonMoves moveSelected)                       // the move selected gets processed and action occurs
+	public void BattleMove (PokemonMoves moveSelected, string side)                       // the move selected gets processed and action occurs
 	{
 
-		playerHealth.text = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.HP + "/" +player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.maxHP;
+		if (side == "AttackPokemon") {
 
-		int damageAttackPokemon = 0;
+			int damageAttackPokemon = 0;
+			int defencePokemonMaxHp = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon> ().maxHP;
+			int attackPokemonLevel = player.GetComponent<Player> ().ownedPokemon [0].level;
 
-		int defencePokemonMaxHp = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon> ().maxHP;
-
-		int attackPokemonLevel = player.GetComponent<Player> ().ownedPokemon [0].level;
-
-
-		float power = moveSelected.power;
-		int attackStatAttackPokemon = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.pokemonStats.attackStat;
-		int defenceStatDefencePokemon = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon>().pokemonStats.defenceStat;
-
+			float power = moveSelected.power;
+			int attackStatAttackPokemon = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.pokemonStats.attackStat;
+			int defenceStatDefencePokemon = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon> ().pokemonStats.defenceStat;
 	
-		damageAttackPokemon =Mathf.FloorToInt(((((((2 * attackPokemonLevel) / 5) + 2) * power * ((float)attackStatAttackPokemon / defenceStatDefencePokemon)) / 50) + 2) * 1);
+			damageAttackPokemon = Mathf.FloorToInt (((((((2 * attackPokemonLevel) / 5) + 2) * power * ((float)attackStatAttackPokemon / defenceStatDefencePokemon)) / 50) + 2) * 1);
 
+			GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon> ().HP -= damageAttackPokemon;   //reduces opponent damage
+			float percentDamage = (((float)damageAttackPokemon / defencePokemonMaxHp) * 100);
+			float opponentBarValue = -opponentHealthBar.GetComponent<RectTransform> ().offsetMax.x;    //offest sets value to negative!!
+			float newValue = (((((100 + percentDamage) / 100) * (203)) - 203) + opponentBarValue);      
+			opponentHealthBar.GetComponent<RectTransform> ().offsetMax = new Vector2 (-newValue, opponentHealthBar.GetComponent<RectTransform> ().offsetMax.y);
 
-		//Debug.Log (damage);
+			player.GetComponent<Player> ().ownedPokemon [0].moves [0].currentPP = player.GetComponent<Player> ().ownedPokemon [0].moves [0].currentPP - 1;
+			currentPP.text = player.GetComponent<Player> ().ownedPokemon [0].moves [0].currentPP.ToString ();
 
-		GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon> ().HP -= damageAttackPokemon;   //reduces opponent damage
+			battleMessageText.text = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.PName + " used " + moveSelected.Name;
+			StartCoroutine (Wait (0.01f));
 
-		float percentDamage = (((float)damageAttackPokemon / defencePokemonMaxHp)*100);
+			DefencePokemonAttacked = false;
 
-		float opponentBarValue = -opponentHealthBar.GetComponent<RectTransform> ().offsetMax.x;    //offest sets value to negative!!
-		//Debug.Log (opponentBarValue);
+		} else if (side == "DefencePokemon") {
+			
+			int damageDefencePokemon = 0;
+			int defencePokemonLevel = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon> ().level;
+			int attackPokemonHP = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.HP;
+			int attackPokemonMaxHp = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.maxHP;
 
-		float newValue =(((((100 + percentDamage) / 100) * (203) )-203)+ opponentBarValue);      
+			float power = moveSelected.power;
+			int attackStatDefencePokemon = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon> ().pokemonStats.attackStat;
+			int defenceStatAttackPokemon = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.pokemonStats.defenceStat;
 
+			damageDefencePokemon = Mathf.FloorToInt (((((((2 * defencePokemonLevel) / 5) + 2) * power * ((float)attackStatDefencePokemon / defenceStatAttackPokemon)) / 50) + 2) * 1);
 
+			player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.HP -= damageDefencePokemon;
 
-		opponentHealthBar.GetComponent<RectTransform> ().offsetMax = new Vector2 (-newValue , opponentHealthBar.GetComponent<RectTransform> ().offsetMax.y);
+			float percentDamage = (((float)damageDefencePokemon / attackPokemonMaxHp) * 100);
+			float playerBarValue = -playerHealthBar.GetComponent<RectTransform> ().offsetMax.x;
+			float newValue = (((((100 + percentDamage) / 100) * (203)) - 203) + playerBarValue); 
+			playerHealthBar.GetComponent<RectTransform> ().offsetMax = new Vector2 (-newValue, playerHealthBar.GetComponent<RectTransform> ().offsetMax.y);
 
-		player.GetComponent<Player> ().ownedPokemon [0].moves [0].currentPP = player.GetComponent<Player> ().ownedPokemon [0].moves [0].currentPP - 1;
+			battleMessageText.text = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon> ().PName + " used "+ moveSelected.Name;
+			StartCoroutine (Wait (0.01f));
+		}
 
-		currentPP.text = player.GetComponent<Player> ().ownedPokemon [0].moves [0].currentPP.ToString();
-
-
-
-		battleMessageText.text = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.PName + " used " + moveSelected.Name;
-		StartCoroutine (Wait (0.01f));
-
-
-		int damageDefencePokemon = 0;
-		int defencePokemonLevel = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon> ().level;
-		int attackPokemonHP = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.HP;
-		//string moveName = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<WildPokemonMoves> ().wildPokemonMoves[0].moves [0].Name;
-		//Debug.Log (moveName + "   pop   ");
-
-		//Debug.Log (opponentHealthBar.GetComponent<RectTransform> ().offsetMax.x);
 	}
+
+
+
 
 	IEnumerator Wait(float time)
 	{
