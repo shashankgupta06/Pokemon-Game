@@ -38,6 +38,9 @@ public class GameManager : MonoBehaviour {
 	public AudioClip battleMusic;
 
 
+	private GameObject imageBetweenScenes;
+
+
 
 	void Awake()
 	{
@@ -51,16 +54,19 @@ public class GameManager : MonoBehaviour {
 		case "PlayerHouseBottom":
 			player.transform.position = new Vector2 (-9.5f, -22.5f);
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
+			player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
 			break;
 
 		case "GarysHouse":
 			player.transform.position = new Vector2 (5.5f, -22.5f);
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
+			player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
 			break;
 
 		case "OakLab":
 			player.transform.position = new Vector2 (4.5f, -32.5f);
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
+			player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
 			break;
 
 		default:
@@ -76,8 +82,9 @@ public class GameManager : MonoBehaviour {
 
 	void OnLevelWasLoaded()
 	{
-		StartCoroutine (Wait (0.3f));
+		StartCoroutine (Wait (1.5f));
 		Debug.Log (LastScene);
+		imageBetweenScenes = player.transform.Find ("Main Camera/ImageBetweenScenes").gameObject;
 	}
 
 	IEnumerator Wait(float n)
@@ -87,18 +94,24 @@ public class GameManager : MonoBehaviour {
 		case "PlayerHouseBottom":
 			yield return new WaitForSeconds (n);
 			player.transform.position = new Vector3 (-9.5f, -22.5f, 0);
+			player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
+			imageBetweenScenes.SetActive (false);
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
 			break;
 
 		case "GarysHouse":
 			yield return new WaitForSeconds (n);
 			player.transform.position = new Vector3 (5.5f, -22.5f, 0);
+			player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
+			imageBetweenScenes.SetActive (false);
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
 			break;
 
 		case "OakLab":
 			yield return new WaitForSeconds (n);
 			player.transform.position = new Vector3 (4.5f, -32.5f, 0);
+			player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
+			imageBetweenScenes.SetActive (false);
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
 			break;
 

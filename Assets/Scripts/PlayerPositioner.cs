@@ -12,9 +12,16 @@ public class PlayerPositioner : MonoBehaviour
 	string LastScene;
 	string pokemonOption;
 
+	private GameObject imageBetweenScenes;
+
 	void OnLevelWasLoaded ()
 	{
+		
 		player = GameObject.Find ("Player");
+		imageBetweenScenes = player.transform.Find ("Main Camera/ImageBetweenScenes").gameObject;
+		player.GetComponent<PlayerMovement> ().isAllowedToMove = false;
+		imageBetweenScenes.SetActive (true);
+		imageBetweenScenes.SetActive (true);
 		LastScene = PlayerPrefs.GetString ("LastScene", "");
 		pokemonOption = PlayerPrefs.GetString ("PokemonOption", "");
 		StartCoroutine (Wait (0.5f));
@@ -35,12 +42,16 @@ public class PlayerPositioner : MonoBehaviour
 			case "MainGame":
 				yield return new WaitForSeconds (n);
 				player.transform.position = new Vector2 (-5, -4);
+				player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
+				imageBetweenScenes.SetActive (false);
 				break;
 
 			case "PlayerHouseTop":
 				yield return new WaitForSeconds (n);
 				player.transform.position = new Vector2 (6, 5);
 				player.GetComponent<SpriteRenderer> ().sprite = westSprite;
+				player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
+				imageBetweenScenes.SetActive (false);
 				break;
 
 			default:
@@ -54,6 +65,8 @@ public class PlayerPositioner : MonoBehaviour
 			case "MainGame":
 				yield return new WaitForSeconds (n);
 				player.transform.position = new Vector2 (0, 1);
+				player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
+				imageBetweenScenes.SetActive (false);
 				break;
 
 			case "FirstPokemon":
@@ -62,16 +75,21 @@ public class PlayerPositioner : MonoBehaviour
 				case "Charmander":
 					yield return new WaitForSeconds (n);
 					player.transform.position = new Vector2 (6, 10);
+					player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
 					break;
 
 				case "Squirtle":
 					yield return new WaitForSeconds (n);
 					player.transform.position = new Vector2 (4, 10);
+					player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
+					imageBetweenScenes.SetActive (false);
 					break;
 
 				case "Bulbasaur":
 					yield return new WaitForSeconds (n);
 					player.transform.position = new Vector2 (5, 10);
+					player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
+					imageBetweenScenes.SetActive (false);
 					break;
 				
 				default:
@@ -88,6 +106,8 @@ public class PlayerPositioner : MonoBehaviour
 		case "GarysHouse":
 			yield return new WaitForSeconds (n);
 			player.transform.position = new Vector2 (-5, -4);
+			player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
+			imageBetweenScenes.SetActive (false);
 			break;
 
 
@@ -98,12 +118,16 @@ public class PlayerPositioner : MonoBehaviour
 			case "OakWalkThrough":
 				yield return new WaitForSeconds (n);
 				player.transform.position = new Vector2 (-5, 1);
+				player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
+				imageBetweenScenes.SetActive (false);
 				break;
 
 			case "PlayerHouseBottom":
 				Debug.Log ("popu");
 				yield return new WaitForSeconds (n);
 				player.transform.position = new Vector2 (5, 4);
+				player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
+				imageBetweenScenes.SetActive (false);
 				break;
 
 			default:

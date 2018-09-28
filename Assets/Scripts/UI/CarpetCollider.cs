@@ -8,6 +8,13 @@ public class CarpetCollider : MonoBehaviour {
 	public GameObject player;
 	public AudioClip gameAudio;
 
+	private GameObject imageBetweenScenes;
+
+	void OnLevelWasLoaded()
+	{
+		imageBetweenScenes = player.transform.Find ("Main Camera/ImageBetweenScenes").gameObject;
+	}
+
 
 	void Awake()
 	{
@@ -22,13 +29,19 @@ public class CarpetCollider : MonoBehaviour {
 
 			switch (currentScene) {
 			case "PlayerHouseBottom":
+				player.GetComponent<PlayerMovement> ().isAllowedToMove = false;
+				imageBetweenScenes.SetActive (true);
 				break;
 
 			case "GarysHouse":
+				player.GetComponent<PlayerMovement> ().isAllowedToMove = false;
+				imageBetweenScenes.SetActive (true);
 				break;
 
 			case "OakLab":
-				PlayMusic (gameAudio);      //uncomment to change audio as scene shifts from oakLab to MainGame
+				PlayMusic (gameAudio);      
+				player.GetComponent<PlayerMovement> ().isAllowedToMove = false;
+				imageBetweenScenes.SetActive (true);
 				break;
 
 			default:
@@ -36,6 +49,7 @@ public class CarpetCollider : MonoBehaviour {
 
 			}
 			SceneManager.LoadScene ("MainGame");
+
 		}
 
 	}
