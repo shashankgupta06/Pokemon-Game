@@ -21,8 +21,8 @@ TextureImporter:
     21300028: Char_14
     21300030: Char_15
     21300032: Char_16
-    21300034: Char_17
-    21300036: Char_18
+    21300034: battle_1
+    21300036: battle_2
     21300038: Char_19
     21300040: South_0
     21300042: South_1
@@ -42,8 +42,8 @@ TextureImporter:
     21300070: Char_35
     21300072: Char_36
     21300074: Char_37
-    21300076: Char_38
-    21300078: Char_39
+    21300076: battle_3
+    21300078: battle_4
     21300080: Char_40
     21300082: Char_41
     21300084: Char_42
@@ -63,8 +63,8 @@ TextureImporter:
     21300112: Char_56
     21300114: Char_57
     21300116: Char_58
-    21300118: Char_59
-    21300120: Char_60
+    21300118: battle_5
+    21300120: battle_6
     21300122: Char_61
     21300124: Char_62
     21300126: Char_63
@@ -86,7 +86,7 @@ TextureImporter:
     21300158: Char_79
     21300160: Char_80
     21300162: Char_81
-    21300164: Char_82
+    21300164: battle_7
     21300166: Char_83
     21300168: Char_84
     21300170: Char_85
@@ -448,7 +448,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Char_17
+      name: battle_1
       rect:
         serializedVersion: 2
         x: 576
@@ -462,11 +462,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Char_18
+      name: battle_2
       rect:
         serializedVersion: 2
-        x: 608
-        y: 245
+        x: 609
+        y: 244
         width: 32
         height: 32
       alignment: 0
@@ -742,7 +742,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Char_38
+      name: battle_3
       rect:
         serializedVersion: 2
         x: 576
@@ -756,7 +756,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Char_39
+      name: battle_4
       rect:
         serializedVersion: 2
         x: 608
@@ -1036,13 +1036,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Char_59
+      name: battle_5
       rect:
         serializedVersion: 2
-        x: 576
-        y: 181
-        width: 32
-        height: 32
+        x: 570
+        y: 179
+        width: 38
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1050,13 +1050,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Char_60
+      name: battle_6
       rect:
         serializedVersion: 2
-        x: 608
-        y: 181
-        width: 32
-        height: 32
+        x: 609
+        y: 182
+        width: 24
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1358,7 +1358,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: Char_82
+      name: battle_7
       rect:
         serializedVersion: 2
         x: 576

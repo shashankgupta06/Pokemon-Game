@@ -40,6 +40,8 @@ public class GameManager : MonoBehaviour {
 
 	private GameObject imageBetweenScenes;
 
+	public GameObject playerThrowingPokeball;
+
 
 
 	void Awake()
@@ -149,8 +151,7 @@ public class GameManager : MonoBehaviour {
 
 		player.GetComponent<PlayerMovement> ().isAllowedToMove = false;
 
-        //TODO: add a way to preven the player  from moviing while in battle
-		//player.GetComponent<PlayerMovement>().isAllowedToMove = false;
+
 
 		GameObject dPoke = Instantiate (emptyPoke, defencePodium.transform.position, Quaternion.identity) as GameObject;
 		dPoke.AddComponent<WildPokemonMoves> ();             //add WildPokemonMoves script that will automatically add moves to the the wild pokemon
@@ -165,8 +166,11 @@ public class GameManager : MonoBehaviour {
 		dPoke.GetComponent<SpriteRenderer> ().sprite = battlePokemon.image;
 		updateText.text ="A wild "+ dPoke.GetComponent<BasePokemon>().PName+ " appeared!";
 
+
 		GameObject ownedPoke = Instantiate (emptyPoke, attackPodium.transform.position, Quaternion.identity) as GameObject;
 		Vector3 OwnedPokeLocalPos = new Vector3 (0, 1, 0);
+
+	
 
 
 		ownedPoke.transform.parent = attackPodium;
@@ -176,10 +180,15 @@ public class GameManager : MonoBehaviour {
 		ownedPokemon.AddMember (player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon);
 
 		ownedPoke.GetComponent<SpriteRenderer> ().sprite = ownedPokemon.image;
+
+	
 		type.text = player.GetComponent<Player> ().ownedPokemon [0].moves [0].Category.ToString ();
 		PP.text = player.GetComponent<Player> ().ownedPokemon [0].moves [0].PP.ToString();          //eventually move this all to BattleManager?
 		pokemonName.text = player.GetComponent<Player>().ownedPokemon[0].NickName;
 		levelTextPlayer.text = player.GetComponent<Player> ().ownedPokemon [0].level.ToString();
+
+		ownedPoke.SetActive (false);
+		playerThrowingPokeball.GetComponent<PlayerThrowingBall> ().move = true;
 
 
 

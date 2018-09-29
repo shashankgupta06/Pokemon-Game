@@ -7,8 +7,11 @@ public class BattleManager : MonoBehaviour {
 
 	public BattleMenu currentMenu;
 	public GameObject player;
+	public GameObject PlayerThrowingBall;
 
 	private bool DefencePokemonAttacked;
+
+
 
 
 	[Header("Cameras")]
@@ -260,6 +263,7 @@ public class BattleManager : MonoBehaviour {
 		Destroy (GameObject.Find ("DefencePodium/emptyPoke(Clone)"));
 		Destroy (GameObject.Find ("AttackPodium/emptyPoke(Clone)"));
 		PlayMusic (routeMusic);
+		PlayerThrowingBall.GetComponent<RectTransform> ().localPosition = new Vector2(-1,1.256f);
 
 
 	}
