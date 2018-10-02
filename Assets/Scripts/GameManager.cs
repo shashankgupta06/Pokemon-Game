@@ -37,6 +37,9 @@ public class GameManager : MonoBehaviour {
 	[Header("Audio")]
 	public AudioClip battleMusic;
 
+	[Header("Menu")]
+	public GameObject menu;
+
 
 	private GameObject imageBetweenScenes;
 
@@ -50,6 +53,7 @@ public class GameManager : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag ("Player");
 		playerCamera = GameObject.FindGameObjectWithTag ("MainCamera");
 		LastScene = PlayerPrefs.GetString ("LastScene", "");
+		menu = player.transform.Find ("Main Camera/Menu").gameObject;
 
 		switch (LastScene) 
 		{
@@ -134,7 +138,17 @@ public class GameManager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+
+
+	// TODO: create an in-game menu so the player can pause the game. This menu also should allow the player to save game state!
 	void Update () {
+
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			menu.SetActive (true);
+			player.GetComponent<PlayerMovement> ().isAllowedToMove = false;
+		}
+
+
 		
 	}
 

@@ -76,7 +76,7 @@ public class BattleManager : MonoBehaviour {
 	void Awake()
 	{
 		player = GameObject.Find ("Player");
-		mainCamera = GameObject.Find ("Main Camera");
+		mainCamera = player.transform.Find ("Main Camera").gameObject;
 
 	}
 
