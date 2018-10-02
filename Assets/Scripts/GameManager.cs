@@ -188,7 +188,7 @@ public class GameManager : MonoBehaviour {
 		levelTextPlayer.text = player.GetComponent<Player> ().ownedPokemon [0].level.ToString();
 
 		ownedPoke.SetActive (false);
-		playerThrowingPokeball.GetComponent<PlayerThrowingBall> ().move = true;
+		//playerThrowingPokeball.GetComponent<PlayerThrowingBall> ().move = true;
 
 
 

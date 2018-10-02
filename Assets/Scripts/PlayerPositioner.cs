@@ -76,6 +76,7 @@ public class PlayerPositioner : MonoBehaviour
 					yield return new WaitForSeconds (n);
 					player.transform.position = new Vector2 (6, 10);
 					player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
+					imageBetweenScenes.SetActive (false);
 					break;
 
 				case "Squirtle":

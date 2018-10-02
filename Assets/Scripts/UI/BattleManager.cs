@@ -104,21 +104,6 @@ public class BattleManager : MonoBehaviour {
 
 		playerHealth.text = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.HP + "/" + player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.maxHP;
 
-		if (-playerHealthBar.GetComponent<RectTransform> ().offsetMax.x >= 145) {
-			playerHealthBar.color = Color.red;
-		} else if (-playerHealthBar.GetComponent<RectTransform> ().offsetMax.x >= 73) {
-			playerHealthBar.color = Color.yellow;
-		}
-
-
-		if (-opponentHealthBar.GetComponent<RectTransform> ().offsetMax.x >= 145) {
-			opponentHealthBar.color = Color.red;
-		} else if (-opponentHealthBar.GetComponent<RectTransform> ().offsetMax.x >= 73) {
-			opponentHealthBar.color = Color.yellow;
-		}
-
-
-
 
 
 		if (Input.GetKeyDown (KeyCode.DownArrow))
@@ -142,7 +127,11 @@ public class BattleManager : MonoBehaviour {
 
 		if (currentSelection == 1 && Input.GetKeyDown (KeyCode.Return) && currentMenu == BattleMenu.Selection)     //if fight option is selected
 		{
-			ChangeMenu (BattleMenu.Fight);
+			if (PlayerThrowingBall.GetComponent<PlayerThrowingBall> ().move == false && PlayerThrowingBall.GetComponent<RectTransform> ().offsetMax.x >= -3) {
+				PlayerThrowingBall.GetComponent<PlayerThrowingBall> ().move = true;
+			} else {
+				ChangeMenu (BattleMenu.Fight);
+			}
 		}
 
 		if (currentSelection == 1 && Input.GetKeyDown (KeyCode.Return) && currentMenu == BattleMenu.Fight) 
