@@ -6039,6 +6039,7 @@ GameObject:
   - component: {fileID: 955601991}
   - component: {fileID: 955601990}
   - component: {fileID: 955601989}
+  - component: {fileID: 955601992}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -6139,6 +6140,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 955601987}
+--- !u!114 &955601992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 955601987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1db4baa56d57ebc489f083f7fe3a3255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backButton: {fileID: 955601989}
+  player: {fileID: 1336543586}
 --- !u!1 &963701471
 GameObject:
   m_ObjectHideFlags: 0
