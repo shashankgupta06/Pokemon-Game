@@ -15,6 +15,9 @@ public class LoadButtonScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Clicked () {
-		Debug.Log ("Feature not available at the moment");
+		string currentScene = SceneManager.GetActiveScene ().name;
+		PlayerPrefs.SetString ("LastScene", currentScene);
+		PlayerPrefs.Save ();
+		SceneManager.LoadScene ("MainGame");
 	}
 }

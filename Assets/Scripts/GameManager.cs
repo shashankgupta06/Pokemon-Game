@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 public class GameManager : MonoBehaviour {
 
@@ -27,7 +29,12 @@ public class GameManager : MonoBehaviour {
 	public Text updateText;
 	public Text OpponentPokemonName;
 
+
+	[Header("Sprites")]
 	public Sprite southSprite;
+	public Sprite eastSprite;
+	public Sprite westSprite;
+	public Sprite northSprite;
 
 	string LastScene;
 
@@ -36,6 +43,7 @@ public class GameManager : MonoBehaviour {
 
 	[Header("Audio")]
 	public AudioClip battleMusic;
+	public AudioClip townMusic;
 
 	[Header("Menu")]
 	public GameObject menu;
@@ -73,6 +81,10 @@ public class GameManager : MonoBehaviour {
 			player.transform.position = new Vector2 (4.5f, -32.5f);
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
 			player.GetComponent<PlayerMovement> ().isAllowedToMove = true;
+			break;
+
+		case "MainMenu":
+			Load ();
 			break;
 
 		default:
@@ -121,6 +133,7 @@ public class GameManager : MonoBehaviour {
 			player.GetComponent<SpriteRenderer> ().sprite = southSprite;
 			break;
 
+
 		default:
 			break;
 
@@ -142,6 +155,9 @@ public class GameManager : MonoBehaviour {
 
 	// TODO: create an in-game menu so the player can pause the game. This menu also should allow the player to save game state!
 	void Update () {
+
+
+		//Debug.Log (player.transform.position.x);
 
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			menu.SetActive (true);
@@ -242,7 +258,63 @@ public class GameManager : MonoBehaviour {
 		GameObject.Find ("BgAudio").GetComponent<AudioSource> ().clip = name;
 		GameObject.Find ("BgAudio").GetComponent<AudioSource> ().Play ();
 	}
+
+
+	public void Load()
+	{
+
+		if (File.Exists (Application.persistentDataPath + "/savedGames.gd")) {
+			BinaryFormatter bf = new BinaryFormatter ();
+			FileStream file = File.Open (Application.persistentDataPath + "/savedGames.gd", FileMode.Open);
+			PlayerData data = (PlayerData)bf.Deserialize (file);
+			file.Close ();
+			player.transform.position = new Vector2 (data.positionX, data.positionY);
+
+			if (data.audio == "TownMusic") {
+				PlayMusic (townMusic);
+			}
+
+
+			switch (data.sprite) {
+
+			case "South_0":
+				player.GetComponent<SpriteRenderer> ().sprite = southSprite;
+				break;
+
+			case "North_0":
+				player.GetComponent<SpriteRenderer> ().sprite = northSprite;
+				break;
+
+			case "east_0":
+				player.GetComponent<SpriteRenderer> ().sprite = southSprite;
+				break;
+
+			case "West_0":
+				player.GetComponent<SpriteRenderer> ().sprite = westSprite;
+				break;
+
+			default:
+				break;
+
+
+			}
+
+		}
+	}
+     
 }
+
+
+[System.Serializable]
+public class PlayerData
+{
+	public float positionX,positionY;
+	public string audio;
+	public string sprite;
+}
+
+
+
 
 
 [System.Serializable]
