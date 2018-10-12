@@ -28,7 +28,6 @@ public class MenuSaveButton : MonoBehaviour {
 		
 		Save ();
 		Debug.Log ("GAME SAVED");
-		Debug.Log (player.transform.position.x);
 	}
 
 	public void Save()
@@ -41,6 +40,8 @@ public class MenuSaveButton : MonoBehaviour {
 		data.positionY = player.transform.position.y;
 		data.audio = GameObject.Find ("BgAudio").gameObject.GetComponent<AudioSource> ().clip.name;
 		data.sprite = player.GetComponent<SpriteRenderer> ().sprite.name;
+		data.name = PlayerPrefs.GetString ("PlayerName","");
+
 
 		bf.Serialize (file, data);
 		file.Close ();

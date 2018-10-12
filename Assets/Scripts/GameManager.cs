@@ -274,6 +274,9 @@ public class GameManager : MonoBehaviour {
 				PlayMusic (townMusic);
 			}
 
+			PlayerPrefs.SetString ("PlayerName", data.name);
+
+
 
 			switch (data.sprite) {
 
@@ -286,7 +289,7 @@ public class GameManager : MonoBehaviour {
 				break;
 
 			case "east_0":
-				player.GetComponent<SpriteRenderer> ().sprite = southSprite;
+				player.GetComponent<SpriteRenderer> ().sprite = eastSprite;
 				break;
 
 			case "West_0":
@@ -311,6 +314,7 @@ public class PlayerData
 	public float positionX,positionY;
 	public string audio;
 	public string sprite;
+	public string name;
 }
 
 

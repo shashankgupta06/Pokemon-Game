@@ -9,7 +9,7 @@ public class PlayerHouseSignText : MonoBehaviour {
 	public Text text;
 
 
-	void Awake()
+	void OnLevelWasLoaded()
 	{
 		playerName = PlayerPrefs.GetString ("PlayerName","");
 		text.text = playerName + "'s house";
