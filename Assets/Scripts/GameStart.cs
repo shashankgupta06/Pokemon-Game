@@ -8,13 +8,13 @@ public class GameStart: MonoBehaviour {
 
 	public Sprite northSprite;
 	public Sprite eastSprite;
-	public GameObject player;
+	public Player player;
 	string LastScene;
 
 	void Awake () {
 		LastScene = PlayerPrefs.GetString ("LastScene", "");
 		Debug.Log (LastScene);
-
+		player = FindObjectOfType<Player>();
 
 		if (LastScene == "PlayerHouseBottom") {
 			player.transform.position = new Vector3 (5, 4, 0);

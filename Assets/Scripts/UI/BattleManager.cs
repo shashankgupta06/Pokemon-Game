@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BattleManager : MonoBehaviour {
 
 	public BattleMenu currentMenu;
-	public GameObject player;
+	public Player player;
 	public GameObject PlayerThrowingBall;
 
 	private bool DefencePokemonAttacked;
@@ -75,7 +75,7 @@ public class BattleManager : MonoBehaviour {
 
 	void Awake()
 	{
-		player = GameObject.Find ("Player");
+		player = FindObjectOfType<Player>();
 		mainCamera = player.transform.Find ("Main Camera").gameObject;
 
 	}
@@ -102,7 +102,7 @@ public class BattleManager : MonoBehaviour {
 	void Update () {
 
 
-		playerHealth.text = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.HP + "/" + player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.maxHP;
+		playerHealth.text = player.ownedPokemon [0].ownedPokemon.HP + "/" + player.ownedPokemon [0].ownedPokemon.maxHP;
 
 
 
@@ -136,7 +136,7 @@ public class BattleManager : MonoBehaviour {
 
 		if (currentSelection == 1 && Input.GetKeyDown (KeyCode.Return) && currentMenu == BattleMenu.Fight) 
 		{
-			BattleMove (player.GetComponent<Player> ().ownedPokemon [0].moves [0], "AttackPokemon");
+			BattleMove (player.ownedPokemon[0].moves [0], "AttackPokemon");
 
 		}
 
@@ -170,29 +170,29 @@ public class BattleManager : MonoBehaviour {
 			switch (currentSelection) 
 			{
 			case 1:
-				moveO.text = "> " + player.GetComponent<Player> ().ownedPokemon [0].moves [0].Name;
+				moveO.text = "> " + player.ownedPokemon [0].moves [0].Name;
 				moveT.text = moveTT;
 				moveTH.text = moveTHT;
 				moveF.text = moveFT;
-				currentPP.text = player.GetComponent<Player> ().ownedPokemon [0].moves [0].currentPP.ToString();   //displays current PP of move
+				currentPP.text = player.ownedPokemon [0].moves [0].currentPP.ToString();   //displays current PP of move
 				break;
 
 			case 2:
-				moveO.text =  player.GetComponent<Player>().ownedPokemon[0].moves[0].Name;
+				moveO.text =  player.ownedPokemon[0].moves[0].Name;
 				moveT.text = "> " +moveTT;
 				moveTH.text =  moveTHT;
 				moveF.text = moveFT;
 				break;
 
 			case 3:
-				moveO.text =  player.GetComponent<Player>().ownedPokemon[0].moves[0].Name;
+				moveO.text =  player.ownedPokemon[0].moves[0].Name;
 				moveT.text =  moveTT;
 				moveTH.text = "> " + moveTHT;
 				moveF.text = moveFT;
 				break;
 
 			case 4:
-				moveO.text =  player.GetComponent<Player>().ownedPokemon[0].moves[0].Name;
+				moveO.text =  player.ownedPokemon[0].moves[0].Name;
 				moveT.text =  moveTT;
 				moveTH.text =  moveTHT;
 				moveF.text = "> " +moveFT;
@@ -272,10 +272,10 @@ public class BattleManager : MonoBehaviour {
 
 			int damageAttackPokemon = 0;
 			int defencePokemonMaxHp = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon> ().maxHP;
-			int attackPokemonLevel = player.GetComponent<Player> ().ownedPokemon [0].level;
+			int attackPokemonLevel = player.ownedPokemon [0].level;
 
 			float power = moveSelected.power;
-			int attackStatAttackPokemon = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.pokemonStats.attackStat;
+			int attackStatAttackPokemon = player.ownedPokemon [0].ownedPokemon.pokemonStats.attackStat;
 			int defenceStatDefencePokemon = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon> ().pokemonStats.defenceStat;
 	
 			damageAttackPokemon = Mathf.FloorToInt (((((((2 * attackPokemonLevel) / 5) + 2) * power * ((float)attackStatAttackPokemon / defenceStatDefencePokemon)) / 50) + 2) * 1);
@@ -286,10 +286,10 @@ public class BattleManager : MonoBehaviour {
 			float newValue = (((((100 + percentDamage) / 100) * (203)) - 203) + opponentBarValue);      
 			opponentHealthBar.GetComponent<RectTransform> ().offsetMax = new Vector2 (-newValue, opponentHealthBar.GetComponent<RectTransform> ().offsetMax.y);
 
-			player.GetComponent<Player> ().ownedPokemon [0].moves [0].currentPP = player.GetComponent<Player> ().ownedPokemon [0].moves [0].currentPP - 1;
-			currentPP.text = player.GetComponent<Player> ().ownedPokemon [0].moves [0].currentPP.ToString ();
+			player.ownedPokemon [0].moves [0].currentPP = player.ownedPokemon [0].moves [0].currentPP - 1;
+			currentPP.text = player.ownedPokemon [0].moves [0].currentPP.ToString ();
 
-			battleMessageText.text = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.PName + " used " + moveSelected.Name;
+			battleMessageText.text = player.ownedPokemon [0].ownedPokemon.PName + " used " + moveSelected.Name;
 			StartCoroutine (Wait (0.01f));
 
 			DefencePokemonAttacked = false;
@@ -298,16 +298,16 @@ public class BattleManager : MonoBehaviour {
 			
 			int damageDefencePokemon = 0;
 			int defencePokemonLevel = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon> ().level;
-			int attackPokemonHP = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.HP;
-			int attackPokemonMaxHp = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.maxHP;
+			int attackPokemonHP = player.ownedPokemon [0].ownedPokemon.HP;
+			int attackPokemonMaxHp = player.ownedPokemon [0].ownedPokemon.maxHP;
 
 			float power = moveSelected.power;
 			int attackStatDefencePokemon = GameObject.Find ("emptyPoke(Clone)").gameObject.GetComponent<BasePokemon> ().pokemonStats.attackStat;
-			int defenceStatAttackPokemon = player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.pokemonStats.defenceStat;
+			int defenceStatAttackPokemon = player.ownedPokemon [0].ownedPokemon.pokemonStats.defenceStat;
 
 			damageDefencePokemon = Mathf.FloorToInt (((((((2 * defencePokemonLevel) / 5) + 2) * power * ((float)attackStatDefencePokemon / defenceStatAttackPokemon)) / 50) + 2) * 1);
 
-			player.GetComponent<Player> ().ownedPokemon [0].ownedPokemon.HP -= damageDefencePokemon;
+			player.ownedPokemon [0].ownedPokemon.HP -= damageDefencePokemon;
 
 			float percentDamage = (((float)damageDefencePokemon / attackPokemonMaxHp) * 100);
 			float playerBarValue = -playerHealthBar.GetComponent<RectTransform> ().offsetMax.x;

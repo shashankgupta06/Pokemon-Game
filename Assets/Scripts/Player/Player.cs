@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public sealed class Player : MonoBehaviour {
 
 	public List<OwnedPokemon> ownedPokemon = new List<OwnedPokemon>();        //was public now set to private
  

@@ -16,7 +16,7 @@ public class WildPokemonMoves : MonoBehaviour {
 
 
 	void Update () {
-		gm = GameObject.FindGameObjectWithTag ("GameManager").GetComponent<GameManager>();       
+		gm = FindObjectOfType<GameManager>();       
 		//Debug.Log (gm.allMoves [0].Name );   //debugs the move addded
 		move = gm.allMoves [0];                     // move added from GameManager
 

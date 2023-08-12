@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour {
 
 	string LastScene;
 
-	public GameObject player;
+	public Player player;
 	public GameObject playerCamera;
 
 	[Header("Audio")]
@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour {
 	void Awake()
 	{
 
-		player = GameObject.FindGameObjectWithTag ("Player");
+		player = FindObjectOfType<Player>();
 		playerCamera = GameObject.FindGameObjectWithTag ("MainCamera");
 		LastScene = PlayerPrefs.GetString ("LastScene", "");
 		menu = player.transform.Find ("Main Camera/Menu").gameObject;
