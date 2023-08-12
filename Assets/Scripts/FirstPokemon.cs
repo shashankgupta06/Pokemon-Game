@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class FirstPokemon : MonoBehaviour
 {
 
-	private GameObject player;
+	private Player player;
 	private string pokeball;
 
 	public GameObject pokeBall1, pokeBall2, pokeBall3;
@@ -19,14 +19,14 @@ public class FirstPokemon : MonoBehaviour
 
 	void Awake()
 	{
-		player = GameObject.FindGameObjectWithTag ("Player");
+		player = FindObjectOfType<Player>();
 	}
 
 
 	void OnLevelWasLoaded()
 	{
 
-		if (player.GetComponent<Player> ().ownedPokemon.Count != 0) {
+		if (player.ownedPokemon.Count != 0) {
 
 			switch (PlayerPrefs.GetString ("ChosenPokemon")) {
 
